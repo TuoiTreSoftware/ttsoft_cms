@@ -17,4 +17,5 @@ This README would normally document whatever steps are necessary to get your app
 * Step 5: Config your .env file to connect database
 * Step 6: Go to home page: yourdomain/
 * Step 7: Go to admin page: yourdomain/admin
+*		Account admin: Email: admin@gmail.com Password: 123456
 * Let's experience it
