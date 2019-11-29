@@ -24,7 +24,6 @@ class DashboardController extends Controller
 	}
 
 	public function index(Request $request){
-		$billings = BillingOrder::getPaginate(10);
-        return view("sales::don_hang_ban.list",compact('billings'));
+        return view("dashboard::index");
 	}
 }

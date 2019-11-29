@@ -19,7 +19,7 @@ class SettingCommand extends Command
      *
      * @var string
      */
-    protected $description = 'The systems will setup Ialc English';
+    protected $description = 'The systems will setup Your Website';
 
     /**
      * Create a new command instance.
@@ -38,7 +38,7 @@ class SettingCommand extends Command
      */
     public function handle()
     {
-        $this->line("Settings the system Ialc English...");
+        $this->line("Settings the your system...");
         Artisan::call('migrate');
         $first_name = $this->ask('Please you enter first name your');
         $last_name = $this->ask('Please you enter last name your');

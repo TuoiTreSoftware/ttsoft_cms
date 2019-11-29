@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2019 lúc 02:48 AM
+-- Thời gian đã tạo: Th10 29, 2019 lúc 10:19 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.3.0
 
@@ -21,50 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `test`
 --
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `abouts`
---
-
-CREATE TABLE `abouts` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `video` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci,
-  `slogan` text COLLATE utf8mb4_unicode_ci,
-  `multi_image` text COLLATE utf8mb4_unicode_ci,
-  `lang` varchar(3) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'vn',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `abouts`
---
-
-INSERT INTO `abouts` (`id`, `title`, `slug`, `image`, `video`, `content`, `slogan`, `multi_image`, `lang`, `created_at`, `updated_at`) VALUES
-(1, 'TTS', 'about', NULL, 'https://www.youtube.com', NULL, '<p>- Với đội ngũ nh&acirc;n vi&ecirc;n chuy&ecirc;n nghiệp c&ugrave;ng c&ocirc;ng nghệ ti&ecirc;n tiến</p>', '[{\"title\":\"UY T\\u00cdN\",\"content\":\"N\\u1ed9i dung 1\",\"icon\":\".\\/uploads\\/abouts\\/icon1.png\"},{\"title\":\"T\\u1eacN T\\u00c2M PH\\u1ee4C V\\u1ee4\",\"content\":\"N\\u1ed9i dung 2\",\"icon\":\".\\/uploads\\/abouts\\/icon2.png\"},{\"title\":\"CH\\u1ea4T L\\u01af\\u1ee2NG\",\"content\":\"N\\u1ed9i dung 3\",\"icon\":\".\\/uploads\\/abouts\\/icon3.png\"}]', 'vn', '2018-06-17 00:25:00', '2019-11-27 01:51:25'),
-(3, 'About Us', 'about', NULL, 'https://www.youtube.com/embed/y65GocjN5RE?autoplay=1&loop=1&playlist=uI-_7eDbv_Q', NULL, '<p>- With a team of professional staff with advanced technology - modern machinery imported from the Federal Republic of Germany, VK SPA is honored to serve you with passion and the spirit of High Responsibility. - We wish with our experience, VK SPA will bring beautiful young - healthy - beautiful from the inside to the outside in the most detail.</p>', '[{\"title\":\"REPUTATION\",\"content\":\"Content 1\",\"icon\":\".\\/uploads\\/abouts\\/icon1.png\"},{\"title\":\"TALK SERVICE\",\"content\":\"Content 2\",\"icon\":\".\\/uploads\\/abouts\\/icon2.png\"},{\"title\":\"QUALITY\",\"content\":\"Content 3\",\"icon\":\".\\/uploads\\/abouts\\/icon3.png\"}]', 'en', '2018-10-01 06:47:17', '2018-10-01 06:55:22');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `branch_hct`
---
-
-CREATE TABLE `branch_hct` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '1',
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `provinces_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -311,7 +267,12 @@ INSERT INTO `content_lang_fields` (`id`, `title`, `content`, `content_type`, `ta
 (140, 'Sport Shoes', '<p>- Shoe material: Open Mesh for ventilation, comfort, smoothness and anti-moldy when worn throughout the day.</p>\r\n\r\n<p>Shoe sole: The phylon material is the latest and lightest material in the current sneaker industry. Underneath the soles of the shoes are thin rubber slats to help prevent slipperiness, increase durability and aesthetics for the sole of the shoe.</p>\r\n\r\n<p>- Lining / sockliner: Good absorbent material, smooth and gentle in moving.</p>\r\n\r\n<p>- Sugary: Meticulous, caring &amp; aesthetically pleasing.</p>\r\n\r\n<p>- Shoes for office women and pregnant mothers because it is the lightest weight of the same type of shoes because the Phylon is considered the most advanced and lightest material available.</p>\r\n\r\n<p>- Color: Moss / Moss Black / Black / Green / Red Fresh / Red</p>\r\n\r\n<p>- Size: 35 - 40</p>\r\n\r\n<p>- Gender: Female</p>\r\n\r\n<p>- Weight: 130-138grs / pcs (size 36)</p>', 'product', '112', '-', 'en', '2018-11-26 06:58:59', '2018-11-26 06:58:59'),
 (141, 'KHUYẾN MÃI MEGA SALE ALL', '<p><span style=\"font-size:22px\">GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG</span></p>\r\n\r\n<p><span style=\"font-size:20px\">❤️❤️❤️</span>&nbsp;Đ&aacute;p lại l&ograve;ng y&ecirc;u thương của Qu&yacute; kh&aacute;ch h&agrave;ng trong chương tr&igrave;nh Mega Sales All, Viken sẽ tiếp tục k&eacute;o d&agrave;i thời gian khuyến m&atilde;i đến 20/12/2018 d&agrave;nh cho những Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng chưa mua kịp trong th&aacute;ng 11 th&igrave; vẫn c&ograve;n thời gian để chọn cho m&igrave;nh đ&ocirc;i gi&agrave;y Viken y&ecirc;u th&iacute;ch.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\">❤️❤️❤️&nbsp;</span>Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng c&oacute; thể đến c&aacute;c showroom để được tư vấn tốt nhất!!! Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng vui l&ograve;ng tham khảo địa chỉ showroom tr&ecirc;n Fanpage của Viken.</p>\r\n\r\n<p><a href=\"https://www.facebook.com/hashtag/viken?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#Viken</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/vikenshoes?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#Vikenshoes</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/th%E1%BA%BFh%E1%BB%87vi%E1%BB%87tn%C4%83ng%C4%91%E1%BB%99ng?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#ThếHệViệtNăngĐộng</a><br />\r\n----------------------------------<br />\r\n📜Xem sản phẩm tại:</p>\r\n\r\n<p>1. Shopee:&nbsp;<a href=\"https://bit.ly/2PdaEF9?fbclid=IwAR2zzrzdZ67CmKK9QV4jPc5BOUkQgBkqvguulVJDVahMxiRct5OylynbeiU\" target=\"_blank\">https://bit.ly/2PdaEF9</a><br />\r\n2. Lazada:&nbsp;<a href=\"https://bit.ly/2NmhuEf?fbclid=IwAR3HDEyXS5zvq1HC6R1vVFqlJqTHnFoZ6j4pniHCfHocQ79va48OI7HgDm8\" target=\"_blank\">https://bit.ly/2NmhuEf</a><br />\r\n3. Tiki:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2vuCEZf%3Ffbclid%3DIwAR1iAk-RaSPWkeUFI3BdhMo2RRiwR144mMTgnyNK4TheeXUzWTvkhrn8N4M&amp;h=AT0WcVityLlakb5Y1SoWZGpo1BSWSaDcrHUPFaIts10yqA3S4h0lZvSi5l6geF1jlwO2JmL4NNsoJVIQyjsMo1u1dDXhV69iBi7TIzBjUYj80EW04x6uDwkCtQ-rA21TREgFzZjsFOyXBlp765NL8MSAPUqHby8j_I6kvfLFVwEEJZV70iVSbyh3yDQgtDQylPJaUkmOdIhHnd-3O4YsTe0Gu_rs9drhrq-jlZtozHUNRJVoZcHpS7hjCQg8UVTZOvjFc2mcVX0cyZhFhVha5Qgh5Actt3LPmrogsQeo8hNwHa0Ybupac6QUdY2dPfhFK-ox00V2QxLVtjrcaOa7CODYKLevZI1P2FYHOkH1PDIwOdTjlanKzPE2F1GkCwoBa8jta-HR57aBqwQ-2PldjoCjSV2km2wFMq4mzKy4CPkmvjWsN9rTPAteyIOjLzK3Y08Ws-USp9URRmZEZK28LDN6dUJVkScaTamdE82_t6TS5KBI2WBt3f4m7hKfq3v5eQP7VPE2xcowUVTW-npXflt9q5aF74EVtaLQEgBOkbJngy3S325Tvzqk-DzRHn5mMKF7TfulaU0WtVBMCC0jGC7u6zaQ1w8kiw8mXBnfJbuYyWsqm1aaJS-ejjmJYew\" target=\"_blank\">https://bit.ly/2vuCEZf</a><br />\r\n4. Shop Vnexpress:&nbsp;<a href=\"https://bit.ly/2AwA0aW?fbclid=IwAR0GlBoDgHhC07wByr0Fv9BtoEyuQMY4HEAVcuka4s4-ah4pCXYr7x1J3ro\" target=\"_blank\">https://bit.ly/2AwA0aW</a><br />\r\n5. AĐ&acirc;yRồi:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2q4sV9v%3Ffbclid%3DIwAR0txVPj0NiVYczObmAd6lM02h_Em26dqG2RmpjyEB9paQjbxRd-4kERas4&amp;h=AT3vamrRohtkbuPfjlbtYHVBBbCpLYmn-3kd-LJtQyRv6V3lilJinEG5DnlAj1O7QBkhmhjHNCX73CY6k7EdWYm1Z5Rgpyw3uVR3n5CbEasCQ0otLmOKphERRYJcXpP1KP_cKEEF-So9rGJzpicByNtAj02vL0VpDqeomnKkPoRkRSBXQZcDYR-7kwgqZzNTCrJMvyzmij7bgz452XIax6qxA_ThxteNz4aoQTgeSOD0yQLDEwE0l9Vr-uN8K_ny3Yf31LbnwMfCO8AIvA-zqNSD156bH5W99AymRFJq7eJ6wRnu08uB2FTT7pVtG0t8D3bAH6_LPXhOTVIRldu-U-rJPtxt5dIqj29PPVr3NOYqSBGzGQIRfbWGVrErFC6jIocaa2XQJdpInHiMIWiUJfRdUygti-MR_yjvqIwb94OP2iLCRx3Zq0OrBgZgJCAi9FPOlrxWcMS9TT-srjD0FNT1PSXzoVST5OlP1YD2DRvA-PLuwzfNCuQjMtBURj8TTcwMDWYjeKOKC37nbNkt2CNWovspTNjqnLLivBp_Grllgl8YNXmi6HscMaOzSALqC11Ihh2rNxrQ-J2KwJRmEtIZnKN-PA_2GypGdO_7Hyj5_AAlA2Xz0gu5UbSWEi8\" target=\"_blank\">https://bit.ly/2q4sV9v</a><br />\r\n6. Sendo:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2zsWSVT%3Ffbclid%3DIwAR1k8evYAqi_cx08v7kFWJEX9nT71D48zeHET-OJHvRnCg6DnaxATxPk2rk&amp;h=AT2tonjX50BkandE2y8KalvcutesQmPd08aeBJBxOOIbw5T1c0_GXEIECudQatz0Kqrj4-UwHX9l0ve_WPvIh0ByvPujcMA8-rzBq6oafr57GxEaMaoEdGJSKuQStchH0HWIE-a91kfObFwWZN9k27xnlJmZJAdPOXfu02XkUmk8KB87bTJffsHvKXvjs0gMJCLZqGTZSeCU73zpe15qLAuiYfDNEQwqvocIgJZeijIv1_kxp_HOUQbOdfi981K90aCJ4RXqnxESBNMffPOfr4jO0_GOlkKd0DbGjpdRkAaTNNj5dTrYlsrAmS0mxlhwNnmLPGpqvi1pVFk0hFlT6VRYjjrQNYM07Z-Ej-0ChqX1vTOYh9bQP3jsuVIVEZuuryPAdbWik8OIWbgKSjX7CMu6SPh6V4tvr9mpC6myH2_jRFELH2JhidnlOflcsxwLDkRUAWt0RngizQdgoXBY5ORKaC0OFqygwYo6xEcgYpFbo8fpM6KiSWmcCRG2XGy9p1Wjo6WlEPt7KN_ioDD3ByzhzIcSFCpAIarhtCtKGoP1WPHJ6ZVcMaE5RrD0z3RDkmxVyXXjZer6DpxRGNc-IczvLM-aLBXT9AThuD1rH2bV-P0EG0jrDLMCa2qELVo\" target=\"_blank\">https://bit.ly/2zsWSVT</a></p>\r\n\r\n<p>Facebook :&nbsp;<a href=\"https://www.facebook.com/Vikensportsvn/\">https://www.facebook.com/Vikensportsvn/</a></p>\r\n\r\n<p>🌎&nbsp;Website:&nbsp;<a href=\"https://l.facebook.com/l.php?u=http%3A%2F%2Fvikensports.com.vn%2F%3Ffbclid%3DIwAR3soxGbkhDygkf-JpPpJuxNKi5rWyTg_R_ESfl0bgOjOAA67O-lpW5wPkk&amp;h=AT0Nt6w-J5Ew4MkXqC1WC9gBSJcOHtnp4as7IciOHGemu9QfOrlz3UGINSQHLnsCKjzYDZnWH6Ql2K7EE1OYPMfwYk8oqu6oNQ1ZErIIcV0N-ZumznKPvTdn0UZwLtHLt_AqZOueRpqyICt9B_8s_kHtSe5QWB2qZ1ymfYHMW1AejqPaRE_pE9LYBVwPn5YMvRBAnQAl0RatG-BYa0fbkoSerJmJwmsVcapAvSjDYA052WG__4PpxoT9BsVoHVOzppfsFFrey8bvqXsJXPFkV2yuKleTqiTFDZLuXB18J0ElrE7oNwkN2wZhZncjix1_aNjRxMwtYJ5pWkuv1hX00wsAc9H961jsG13gaBCMKLSSVpW9sc4kgPu5HwOBvudH8gx75zaPpWyvrjxnHOF5nAycD6F3edc5rgZaTMNNONXnchAfHAwvy00k3cvJFx-50QzrWchpV0uY1fgvpni-DtV0ahvxaMLw5LcdveN5zwKDs-WsfzKgw8HJGzZkxpi2HUFEbz92MsuG2qGpV6sFoptJSA7fmbyM62fpm2qVmEwz9JxJa9fEUygjreZzpDpwbtrl5P0qAz1vs13tRIj8Y-a02VzLPWobC1Hno_w_4VWgDUTpAH1y7y34zZjxvhs\" target=\"_blank\">http://vikensports.com.vn</a><br />\r\n☎️&nbsp;Hotline tư vấn v&agrave; hỗ trợ đặt h&agrave;ng: 028 7107 7868<br />\r\n📩&nbsp;Hotline g&oacute;p &yacute; sản phẩm:&nbsp;<a href=\"https://m.me/Vikensportsvn?fbclid=IwAR21pWnKrwGM6MBhSeeD3gpK5atQSzaY4qodTDZrxXOWJ3jpoUaw7QOOuTQ\" target=\"_blank\">m.me/Vikensportsvn</a></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;&gt; GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG&lt;&lt;</p>\r\n\r\n<p><a href=\"https://www.facebook.com/Vikensportsvn/photos/a.193870551258333/281911422454245/?type=3&amp;eid=ARDQ9NqWOOLyLG9Bvi9ZPyH_TxahqMMyhyFoVfYD_ZSHehsEJYg6v6YyghRluEkFsPbDjcQxyFv1tpP3&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=EHH-R\"><img alt=\"Trong hình ảnh có thể có: giày và văn bản\" src=\"https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/s720x720/46890440_281911425787578_5638639662705672192_o.jpg?_nc_cat=107&amp;_nc_ht=scontent.fsgn2-1.fna&amp;oh=5ecdd1e55dd7073655c9cb401cfc9c7b&amp;oe=5CA3F681\" style=\"height:473px; width:474px\" /></a></p>', 'post', '17', '-', 'vn', '2018-11-29 03:51:01', '2018-11-29 07:24:26'),
 (142, 'VIETNAM EXPO IN HOCHIMINH CITY 2018', '<p style=\"text-align: center;\"><span style=\"font-size:26px\">VIETNAM EXPO IN HOCHIMINH CITY 2018</span></p>\r\n\r\n<p style=\"text-align: center;\"><span style=\"font-size:20px\">🎁🎁🎁</span>&nbsp;Viken Sports th&acirc;n mời Q&uacute;i Fan &amp; Q&uacute;i kh&aacute;ch h&agrave;ng đến tham quan gian h&agrave;ng B116 khu A2 trưng b&agrave;y gi&agrave;y thể thao mỹ VIKEN SPORTS. Nhiều chương tr&igrave;nh khuyến m&atilde;i đặc biệt đang chờ Q&uacute;i Fan &amp; Q&uacute;i kh&aacute;ch h&agrave;ng chỉ c&oacute; tại đ&acirc;y trong &iacute;t ng&agrave;y triễn l&atilde;m diễn ra:</p>\r\n\r\n<p style=\"text-align: center;\"><span style=\"font-size:20px\">🏃&zwj;♀️🏃&zwj;♂️🏃&zwj;♀️VIETNAM EXPO IN HOCHIMINH CITY 2018🏃&zwj;♂️🏃&zwj;♀️🏃&zwj;♂️</span><br />\r\nThời gian: 5-8/12/2018.&nbsp;<br />\r\nTại trung t&acirc;m Triển l&atilde;m v&agrave; Hội nghị S&agrave;i G&ograve;n (SECC)<br />\r\n799 Nguyễn Văn Linh, Phường T&acirc;n Ph&uacute;, Q.7, TP. Hồ Ch&iacute; Minh.</p>\r\n\r\n<p style=\"text-align: center;\">Tr&acirc;n trọng k&iacute;nh mời.</p>\r\n\r\n<p style=\"text-align: center;\"><a href=\"https://www.facebook.com/hashtag/viken?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#Viken</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/vikenshoes?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#Vikenshoes</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/th%E1%BA%BFh%E1%BB%87vi%E1%BB%87tn%C4%83ng%C4%91%E1%BB%99ng?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#ThếHệViệtNăngĐộng</a></p>\r\n\r\n<p style=\"text-align: center;\"><a href=\"https://www.facebook.com/Vikensportsvn/photos/a.193870551258333/284802375498483/?type=3&amp;eid=ARD1jHiZo-yOZQYChjNfZYHsJ5g0iurOkq0TfcPbv9FzGaJ4IWR1wXO2uKvyUwspLd0YQ9mPlR7gtLTY&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=EEHH-R-R-R\"><img alt=\"Trong hình ảnh có thể có: văn bản\" src=\"https://scontent.fsgn6-1.fna.fbcdn.net/v/t1.0-9/p843x403/47005831_284802382165149_6550904005004886016_o.jpg?_nc_cat=103&amp;_nc_oc=AWOmI4JTOTlD5Ocal4N61NPO_YgtsFFv1qrmI45aKDqfTDdxKZtj-3wC4Pn19A&amp;_nc_ht=scontent.fsgn6-1.fna&amp;oh=cc1971e819f7a5d9591ac68c8a660080&amp;oe=5C64D9C1\" style=\"height:500px; width:500px\" /></a></p>', 'post', '18', '-', 'vn', '2018-12-04 16:29:20', '2018-12-04 16:29:20'),
-(143, 'VIKEN SPORTS TRÊN ĐƯỜNG HỘI NHẬP', '<p><a href=\"http://&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Io3YCULORHA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;\">http://&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Io3YCULORHA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</a></p>', 'page', '15', '-', 'vn', '2018-12-31 04:44:58', '2018-12-31 04:44:58');
+(143, 'VIKEN SPORTS TRÊN ĐƯỜNG HỘI NHẬP', '<p><a href=\"http://&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Io3YCULORHA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;\">http://&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Io3YCULORHA&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;</a></p>', 'page', '15', '-', 'vn', '2018-12-31 04:44:58', '2018-12-31 04:44:58'),
+(144, '1', '<p>1</p>', 'post', '19', '-', 'vn', '2019-11-29 08:23:46', '2019-11-29 08:23:46'),
+(145, 'aaaa', NULL, 'post_category', '25', '-', 'vn', '2019-11-29 09:13:07', '2019-11-29 09:13:07'),
+(146, 'aaaaaa', NULL, 'post_category', '26', '-', 'vn', '2019-11-29 09:13:26', '2019-11-29 09:13:26'),
+(147, 'aaaaaaaa', NULL, 'post_category', '27', '-', 'vn', '2019-11-29 09:14:00', '2019-11-29 09:14:00'),
+(148, 'ấdas', NULL, 'post_category', '28', '-', 'vn', '2019-11-29 09:15:05', '2019-11-29 09:15:05');
 
 -- --------------------------------------------------------
 
@@ -362,25 +323,6 @@ INSERT INTO `customers` (`id`, `first_name`, `last_name`, `sex`, `type_customer`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `customer_address`
---
-
-CREATE TABLE `customer_address` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `province` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Tỉnh/Thành Phố giao hàng',
-  `district` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Quận/Huyện giao hàng',
-  `ward` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Xã/Phường giao hàng',
-  `customer_id` int(10) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `discounts`
 --
 
@@ -398,161 +340,6 @@ CREATE TABLE `discounts` (
   `course_class_id` int(10) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `discounts`
---
-
-INSERT INTO `discounts` (`id`, `name`, `code`, `value`, `number_use`, `number_already_use`, `type`, `start_date`, `end_date`, `course_id`, `course_class_id`, `created_at`, `updated_at`) VALUES
-(3, 'VIKENSPORT01', 'VIKENSPORT01', 5, 10, 10, 2, '2018-11-05', '2018-11-08', 3, 7, '2018-11-06 03:49:06', '2018-11-06 03:49:06');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `doc_details`
---
-
-CREATE TABLE `doc_details` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `price` int(11) NOT NULL DEFAULT '0',
-  `vat` int(11) NOT NULL,
-  `doc_headers_id` int(10) UNSIGNED NOT NULL,
-  `kho_id` int(11) NOT NULL,
-  `gia_tri` int(11) DEFAULT NULL,
-  `gia_tri_vat` int(11) DEFAULT NULL,
-  `product_billing_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `khoang_muc_phi` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `size` int(11) DEFAULT NULL,
-  `color` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `doc_headers`
---
-
-CREATE TABLE `doc_headers` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `customer_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `status_id` int(11) DEFAULT NULL,
-  `doc_code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bank_accounts` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `prefix` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `operation_date` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `phone_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `so_hoa_don` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `date_delivery` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type_pay` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `note` text COLLATE utf8mb4_unicode_ci,
-  `type_order` tinyint(4) NOT NULL DEFAULT '1',
-  `payment_method` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'COD',
-  `discount_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `discount_price` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `failed_jobs`
---
-
-CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `hoa_hong_san_pham`
---
-
-CREATE TABLE `hoa_hong_san_pham` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `product_cate_id` int(11) NOT NULL,
-  `staffs_id` int(11) NOT NULL,
-  `tyle_hoahong` int(11) DEFAULT NULL,
-  `tien_tua` int(11) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `homes`
---
-
-CREATE TABLE `homes` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci,
-  `slogan` text COLLATE utf8mb4_unicode_ci,
-  `multi_image` text COLLATE utf8mb4_unicode_ci,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `homes`
---
-
-INSERT INTO `homes` (`id`, `title`, `slug`, `image`, `content`, `slogan`, `multi_image`, `created_at`, `updated_at`) VALUES
-(10, 'Section1', 'SECTION_1', NULL, '{\"category\":null,\"limit\":\"4\"}', NULL, NULL, NULL, '2019-11-27 01:48:50'),
-(11, 'Section 2', 'SECTION_2', NULL, '{\"category\":null,\"limit\":\"1\"}', 'Slogan section 2', NULL, NULL, '2019-11-27 01:49:08'),
-(12, 'Section 3', 'SECTION_3', NULL, '{\"category\":null,\"limit\":\"4\"}', 'slogan section 3', NULL, NULL, '2019-11-27 01:49:38'),
-(13, 'Section 4', 'SECTION_4', NULL, '{\"category\":null,\"limit\":\"4\"}', NULL, NULL, NULL, '2019-11-27 01:50:10'),
-(17, 'Section 5', 'SECTION_8', NULL, '{\"category\":\"SECTION_8\",\"limit\":null}', NULL, NULL, NULL, '2019-11-27 01:50:21');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `jobs`
---
-
-CREATE TABLE `jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `queue` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attempts` tinyint(3) UNSIGNED NOT NULL,
-  `reserved_at` int(10) UNSIGNED DEFAULT NULL,
-  `available_at` int(10) UNSIGNED NOT NULL,
-  `created_at` int(10) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `locales`
---
-
-CREATE TABLE `locales` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `code` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lang_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `display_name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -768,38 +555,6 @@ CREATE TABLE `menus` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `menus`
---
-
-INSERT INTO `menus` (`id`, `title`, `slug`, `image`, `url`, `position`, `category`, `parent_id`, `lang`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(8, 'TRANG CHỦ', 'trang-chu', NULL, '/', 1, 1, 0, 'vn', NULL, '2018-06-08 16:07:54', '2018-06-15 09:52:21'),
-(18, 'Chính sách khách hàng thân thiết', 'tin-tuyen-dung', NULL, '/tin-tuc/tuyen-nhan-vien-lam-viec-tai-hct-5.html', 2, 2, 0, 'vn', NULL, '2018-06-14 03:02:12', '2018-11-06 02:37:23'),
-(19, 'Tin tức', 'tin-tuc', NULL, '/tin-tuc.html', 5, 2, 0, 'vn', NULL, '2018-06-14 03:02:12', '2018-06-18 08:19:04'),
-(29, 'Liên hệ', 'lien-he', NULL, '/lien-he.html', 4, 2, 0, 'vn', NULL, '2018-06-18 07:49:02', '2018-08-12 05:12:26'),
-(36, 'SẢN PHẨM', 'duoc-pham', NULL, '/san-pham.html', 2, 1, 0, 'vn', NULL, '2018-07-02 08:13:31', '2018-11-13 02:18:23'),
-(40, 'TIN TỨC', 'tin-tuc', NULL, '/danh-muc/tin-tuc.html', 7, 1, 0, 'vn', NULL, '2018-09-19 03:41:04', '2018-09-19 03:41:25'),
-(41, 'Tin tuyển dụng', 'tin-tuyen-dung', NULL, '/danh-muc/tin-tuyen-dung.html', 9, 1, 40, 'vn', NULL, '2018-09-19 03:41:11', '2018-09-19 09:22:09'),
-(42, 'Tin nổi bật', 'tin-noi-bat', NULL, 'danh-muc/tin-noi-bat.html', 8, 1, 40, 'vn', NULL, '2018-09-19 03:41:11', '2018-09-19 09:21:48'),
-(48, 'Thông tin khuyến mãi', 'khuyen-mai-mung-khai-truong', NULL, '/tin-tuc/khuyen-mai-mung-khai-truong-14.html', 3, 2, 0, 'vn', NULL, '2018-09-29 04:50:00', '2018-11-06 02:37:01'),
-(49, 'Sale off date open store', 'khuyen-mai-mung-khai-truong', NULL, '/tin-tuc/khuyen-mai-mung-khai-truong-14.html', 1, 2, 0, 'en', NULL, '2018-09-29 04:50:09', '2018-09-29 04:50:09'),
-(50, 'Terms & Conditions 12', 'http://dev.redsun.info/terms-conditions12-12.html', NULL, '/terms-conditions12-12.html', 2, 2, 0, 'en', NULL, '2018-09-29 04:52:02', '2018-09-29 04:52:02'),
-(51, 'Terms & Conditions 8', 'http://dev.redsun.info/terms-conditions8-8.html', NULL, 'http://dev.redsun.info/terms-conditions8-8.html', 1, 2, 0, 'en', NULL, '2018-09-29 04:53:45', '2018-09-29 04:53:45'),
-(53, 'Giới thiệu', 'gioi-thieu', NULL, 'gioi-thieu.html', 1, 2, 0, 'vn', NULL, '2018-09-29 04:59:30', '2018-09-29 04:59:30'),
-(54, 'Home', 'trang-chu', NULL, '/', 1, 1, 0, 'en', NULL, '2018-09-29 05:01:26', '2018-09-29 05:02:00'),
-(57, 'Products', 'products', NULL, '/san-pham.html', 2, 1, 0, 'en', NULL, '2018-09-29 05:04:21', '2018-09-29 05:04:21'),
-(58, 'News', '', NULL, '#', 4, 1, 0, 'en', NULL, '2018-09-29 05:07:43', '2018-09-29 05:07:56'),
-(65, 'Article', 'tin-tuc', NULL, '/danh-muc/tin-tuc.html', 6, 1, 58, 'en', NULL, '2018-09-29 05:19:18', '2018-09-29 05:19:50'),
-(66, '家', '', NULL, '/', 1, 1, 0, 'cn', NULL, '2018-09-29 05:33:16', '2018-09-29 05:33:16'),
-(67, '关于我们', '', NULL, 'gioi-thieu.html', 1, 1, 0, 'cn', NULL, '2018-09-29 05:33:47', '2018-09-29 05:33:47'),
-(70, 'Events', 'su-kien', NULL, 'http://dev.redsun.info/danh-muc/su-kien.html', 5, 1, 58, 'en', NULL, '2018-10-01 08:23:00', '2018-10-01 08:23:00'),
-(74, 'Hệ thống cửa hàng', 'he-thong-cua-hang', NULL, '#store', 1, 5, 0, 'vn', NULL, '2018-11-04 09:48:31', '2018-11-04 09:48:31'),
-(75, 'Hợp tác', 'hop-tac', NULL, '#', 2, 5, 0, 'vn', NULL, '2018-11-04 09:48:39', '2018-11-04 09:48:39'),
-(80, 'Khuyến mãi', 'khuyen-mai', NULL, '/danh-muc/khuyen-mai.html', 6, 1, 0, 'vn', NULL, '2018-11-06 03:32:46', '2018-11-13 02:12:16'),
-(81, 'Liên hệ', 'lien-he', NULL, '/lien-he.html', 10, 1, 0, 'vn', NULL, '2018-11-06 03:35:42', '2019-11-26 09:16:33'),
-(86, 'SaleOff', 'khuyen-mai', NULL, 'http://vikensports.com.vn/danh-muc/khuyen-mai.html', 3, 1, 0, 'en', NULL, '2018-11-23 08:24:55', '2018-11-23 08:24:55'),
-(87, 'Contact', 'contact', NULL, 'http://vikensports.com.vn/lien-he.html', 7, 1, 0, 'en', NULL, '2018-11-23 08:26:19', '2018-11-23 08:26:19');
-
 -- --------------------------------------------------------
 
 --
@@ -822,10 +577,7 @@ CREATE TABLE `menu_categories` (
 --
 
 INSERT INTO `menu_categories` (`id`, `title`, `identify`, `content`, `status`, `lang`, `created_at`, `updated_at`) VALUES
-(1, 'Menu Header', 'main_header', NULL, 1, 'vn', '2018-09-28 17:00:00', '2018-09-29 05:19:28'),
-(2, 'Menu Footer', 'footer', NULL, 1, 'vn', '2018-09-28 17:00:00', '2018-09-28 17:00:00'),
-(4, 'Menu Left Sidebar', 'left_sidebar', NULL, 1, 'vn', '2018-09-29 03:43:15', '2018-09-29 03:43:15'),
-(5, 'Top Header', 'top_header', NULL, 1, 'vn', '2018-11-04 09:48:13', '2018-11-04 09:48:13');
+(1, 'Menu Header', 'main_header', NULL, 1, 'vn', '2018-09-28 17:00:00', '2018-09-29 05:19:28');
 
 -- --------------------------------------------------------
 
@@ -838,97 +590,6 @@ CREATE TABLE `migrations` (
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `migrations`
---
-
-INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2015_02_03_180720_create_locales_table', 1),
-(4, '2015_02_03_180721_create_translations_table', 1),
-(5, '2018_03_12_035618_create_admins_table', 1),
-(6, '2018_04_01_071038_create_db_hct_project_table', 1),
-(7, '2018_04_01_075444_create_menu_table', 1),
-(8, '2018_04_01_083705_create_courses_table', 1),
-(9, '2018_04_01_091544_create_settings_table', 2),
-(10, '2018_04_01_125132_update_field_student_number_regiter_table', 3),
-(11, '2018_04_14_055939_entrust_setup_tables', 4),
-(12, '2014_04_02_193005_create_translations_table', 5),
-(13, '2018_05_27_122413_create_home_table', 6),
-(15, '2018_06_01_111218_add_meta_table', 7),
-(16, '2018_06_01_115202_add_image_table', 8),
-(18, '2018_06_01_132934_add_content_detail_table', 9),
-(20, '2018_06_01_153345_create_table_sliders_table', 10),
-(22, '2018_06_02_130614_create_courses_table', 11),
-(25, '2018_06_05_164438_create_sections_table', 12),
-(26, '2018_06_08_224910_add_caterory_field_table', 13),
-(27, '2018_06_09_135224_add_price_class_rooms', 14),
-(30, '2018_06_09_141754_create_info_student_table', 15),
-(31, '2018_06_09_143908_create_info_branch_hct_table', 15),
-(32, '2018_06_09_144417_add_giang_vien_table_courses', 15),
-(33, '2018_06_12_093204_add_sex_info_student_table', 16),
-(35, '2018_06_14_100634_add_category_slider_sliders_table', 17),
-(36, '2018_05_27_122413_create_about_table', 18),
-(37, '2018_06_16_185121_add_field_youtube_table', 19),
-(38, '2018_06_16_185121_add_field_url_table', 20),
-(39, '2018_06_19_093743_create_permission_group_table', 21),
-(40, '2018_06_23_110709_add_class_filed_object_table', 22),
-(41, '2018_06_23_131903_create_discounts_table', 22),
-(42, '2018_06_23_164609_add_field_price_table', 22),
-(43, '2018_06_27_132930_add_category_post_table', 23),
-(44, '2018_06_28_164205_create_table_module_products_table', 24),
-(45, '2018_06_28_171755_create_table_module_order_table', 25),
-(46, '2018_07_02_113958_add_column_to_products_table', 26),
-(47, '2018_07_04_144145_create_categories_inventories_table', 27),
-(48, '2018_07_06_111623_create_status_table', 27),
-(49, '2018_07_06_143158_create__doc_headers_table', 27),
-(50, '2018_07_06_144139_create_doc_details_table', 27),
-(51, '2018_07_06_152426_add_votes_to_doc_headers_table', 27),
-(52, '2018_07_06_154016_add_votes_to_doc_headers_2_table', 27),
-(53, '2018_07_07_101809_add_votes_to_customers_table', 27),
-(54, '2018_07_07_104055_add_votes_to_doc_headers_3_table', 27),
-(55, '2018_07_02_113958_add_unit_column_to_products_table', 28),
-(56, '2018_07_02_113958_add_unit_exchange_value_column_to_products_table', 29),
-(57, '2018_07_07_104055_fix_categories_inventory_table', 30),
-(58, '2018_07_07_104055_add_prefix_to_categories_table', 31),
-(59, '2018_07_09_123754_create_log_activity_table', 32),
-(60, '2018_07_10_154247_add_column_prefix_to_doc_header_table', 33),
-(61, '2018_07_10_154849_drop_column_name_to_doc_header_table', 33),
-(62, '2018_07_12_103851_add_column_to_customers_table', 33),
-(63, '2018_07_12_105454_add_column_to_customers_table', 34),
-(64, '2018_07_12_101018_rename_column_data_export_doc_headers_table', 35),
-(65, '2018_07_24_144000_add_and_edit_column_homes_table', 36),
-(66, '2014_04_02_193005_create_staffs_in_out_table', 37),
-(67, '2018_08_20_103544_add_column_to_doc_details_table', 37),
-(68, '2018_08_20_112622_add_column_bank_accounts_to_doc_headers_table', 38),
-(69, '2018_08_22_100004_create_shoppingcart_table', 39),
-(70, '2018_08_25_111736_create_hhsp_pbds_table', 39),
-(71, '2018_08_20_112622_add_column_description_to_product_categories_table', 40),
-(72, '2018_08_20_112622_add_column_province_to_customers_table', 41),
-(73, '2018_09_05_142453_add_column_tien_tua_to_hoa_hong_san_pham_table', 42),
-(74, '2018_09_08_131940_add_fields_doc_headers_table', 43),
-(75, '2018_09_10_123910_change_column_product_barcode_string_20_product_table', 43),
-(76, '2018_09_10_164950_add_fields_phan_bo_doanh_so_table', 43),
-(77, '2018_09_10_165957_add_fields_note_doc_headers_table', 43),
-(78, '2018_09_10_170548_change_column_description_to_doc_headers_table', 43),
-(79, '2018_09_11_190941_add_field_type_order_table', 44),
-(81, '2018_09_20_095432_create_tham_so_du_toan_table', 45),
-(82, '2018_09_24_203145_create_content_lang_fields_table', 46),
-(83, '2018_09_29_082538_add_field_lang_menu_table', 47),
-(85, '2018_09_29_084623_create_category_menus_table', 48),
-(86, '2018_09_29_093544_add_fields_status_menu_categories_table', 49),
-(87, '2018_10_01_133922_add_fields_lang_abouts_table', 50),
-(88, '2018_10_03_194520_edit_column_setting_add_lang_settings_table', 51),
-(89, '2018_10_16_191036_add_field_product_attribute_mapping_table', 51),
-(90, '2018_11_02_093853_add_column_provinces_id_table_branch', 52),
-(91, '2018_09_23_193901_add_field_payment_method_doc_headers_table', 53),
-(92, '2018_11_03_104717_add_fields_discount_code_and_price_table', 53),
-(93, '2018_11_06_095646_add_fields_attrs_table', 53),
-(94, '2018_11_24_123304_add_price_sale_table', 54),
-(95, '2018_12_02_081000_create_jobs_table', 55),
-(96, '2018_12_02_081050_create_failed_jobs_table', 56);
 
 -- --------------------------------------------------------
 
@@ -1224,23 +885,6 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `phan_bo_doanh_so`
---
-
-CREATE TABLE `phan_bo_doanh_so` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `doc_detail_id` int(11) NOT NULL,
-  `product_cate_id` int(11) NOT NULL,
-  `staff_id` int(11) NOT NULL,
-  `tyle_hoahong` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `type` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `posts`
 --
 
@@ -1267,15 +911,6 @@ CREATE TABLE `posts` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Đang đổ dữ liệu cho bảng `posts`
---
-
-INSERT INTO `posts` (`id`, `name`, `slug`, `category_id`, `sort_order`, `author_id`, `status`, `sumary`, `content`, `number_view`, `image`, `post_tag`, `start_display`, `end_display`, `meta_title`, `meta_keywords`, `meta_description`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(16, 'Khuyến Mãi Mega Sales All', 'khuyen-mai-mega-sales-all', NULL, 0, 7, 1, NULL, '<p style=\"margin-left:0px; margin-right:0px; text-align:left\">GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG</p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px; text-align:left\"><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">🎁</span></span><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">🎁</span></span><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">🎁</span></span> Sau những chương tr&igrave;nh mua gi&agrave;y tặng qu&agrave; d&agrave;nh cho kh&aacute;ch h&agrave;ng trước đ&acirc;y trong m&ugrave;a tựu trường &amp; mua 1 tặng 1 trong th&aacute;ng 9 đến giữa th&aacute;ng 10/2018 m&agrave; Viken đ&atilde; h&acirc;n hạnh giới thiệu.</p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px; text-align:left\">$$$ Nay Viken lại kh&ocirc;ng ngừng nỗ lực đ&aacute;p lại t&igrave;nh y&ecirc;u thương của Q&uacute;i kh&aacute;ch h&agrave;ng bằng chương tr&igrave;nh MEGA SALES ALL - GIẢM TẤT CẢ - từ 20/10 đến 20/11/2018 trực tiếp tr&ecirc;n tất cả c&aacute;c d&ograve;ng sản phẩm của Viken tại to&agrave;n bộ hệ thống cửa h&agrave;ng, đại l&yacute; v&agrave;<span style=\"font-family:helvetica,arial,sans-serif\"> hầu hết top c&aacute;c trang thương mại điện tử tại Việt Nam!</span></p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px\"><span style=\"font-family:helvetica,arial,sans-serif\"><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6c/1/16/2764.png\" style=\"height:16px; width:16px\" /><span style=\"font-family:helvetica,arial,sans-serif; font-size:0px\">&lt;3</span></span> <span style=\"font-family:helvetica,arial,sans-serif\"><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6c/1/16/2764.png\" style=\"height:16px; width:16px\" /><span style=\"font-family:helvetica,arial,sans-serif; font-size:0px\">&lt;3</span></span> <span style=\"font-family:helvetica,arial,sans-serif\"><img alt=\"\" src=\"https://static.xx.fbcdn.net/images/emoji.php/v9/f6c/1/16/2764.png\" style=\"height:16px; width:16px\" /><span style=\"font-family:helvetica,arial,sans-serif; font-size:0px\">&lt;3</span></span> C&aacute;c kh&aacute;ch y&ecirc;u c&oacute; thể đến c&aacute;c showroom để được tư vấn tốt nhất !!! kh&aacute;ch y&ecirc;u tham khảo địa chị trong phần địa chỉ showroom tren fb .</p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px\"><a href=\"https://www.facebook.com/hashtag/viken?source=feed_text&amp;__xts__%5B0%5D=68.ARCpQwLmFEKnSJQ8Yt8JIBQ0lrP_l5zJF3hNa4Ey7ljVid9oeT3_QAiOHfFEn-j_bDelsYuhKKSmKjaRAgEr6TXkW61HH-nxz6RrrlMzDkCBvW1L34niTHY4yWUy3NqTXN-JslnrTuxhNk80TQ5DJlfiST0p0DrjW-qgyN-e8LE8_7lB90iPoamr55NfJfpYc5lPeV1PsC1B5ubFcWxakv8h&amp;__tn__=%2ANK-R\"><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:rgb(54, 88, 153); font-family:helvetica,arial,sans-serif\">#</span><span style=\"font-family:helvetica,arial,sans-serif\">Viken</span></span></a> <a href=\"https://www.facebook.com/hashtag/vikenshoes?source=feed_text&amp;__xts__%5B0%5D=68.ARCpQwLmFEKnSJQ8Yt8JIBQ0lrP_l5zJF3hNa4Ey7ljVid9oeT3_QAiOHfFEn-j_bDelsYuhKKSmKjaRAgEr6TXkW61HH-nxz6RrrlMzDkCBvW1L34niTHY4yWUy3NqTXN-JslnrTuxhNk80TQ5DJlfiST0p0DrjW-qgyN-e8LE8_7lB90iPoamr55NfJfpYc5lPeV1PsC1B5ubFcWxakv8h&amp;__tn__=%2ANK-R\"><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:rgb(54, 88, 153); font-family:helvetica,arial,sans-serif\">#</span><span style=\"font-family:helvetica,arial,sans-serif\">Vikenshoes</span></span></a> <a href=\"https://www.facebook.com/hashtag/thếhệviệtnăngđộng?source=feed_text&amp;__xts__%5B0%5D=68.ARCpQwLmFEKnSJQ8Yt8JIBQ0lrP_l5zJF3hNa4Ey7ljVid9oeT3_QAiOHfFEn-j_bDelsYuhKKSmKjaRAgEr6TXkW61HH-nxz6RrrlMzDkCBvW1L34niTHY4yWUy3NqTXN-JslnrTuxhNk80TQ5DJlfiST0p0DrjW-qgyN-e8LE8_7lB90iPoamr55NfJfpYc5lPeV1PsC1B5ubFcWxakv8h&amp;__tn__=%2ANK-R\"><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:rgb(54, 88, 153); font-family:helvetica,arial,sans-serif\">#</span><span style=\"font-family:helvetica,arial,sans-serif\">ThếHệViệtNăngĐộng</span></span></a><br />\r\n----------------------------------<br />\r\n<span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">📜</span></span>Xem sản phẩm tại:</p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px\">1. Shopee: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2PdaEF9%3Ffbclid%3DIwAR2YRlsx5U88oIKZjiyKIS3fXuPwnGhPSw8tEn4bRrw_PRFVkmWPLYppLq8&amp;h=AT1bSFvespXcKR2_mLuWk-8SBOezL6VOpc9ZnvXP1Fmll1gKP9-w5n5IBaKptAxKl9jnXcleESL7W0DNHDm93bV5YzGRpbsHghp3GC2_I3qywdk46fKHJcELn0lRZ02dn2ZOmKLSEiY8eLioCuXfe0Q6izNpScN6hRiV9eWb2su0fuKiZ5so1DVRtXxZMQeSyMbueFRackhid4aM4SB8S3NFQBYEN2yUT6MWtSmnYl6BGRzitzE43MB2riJkvAFIrsl4kOT1ebcaXKOP0wXvSHmoZM0oUCSbjKkD7FrHPPMb1dz6hxL4ZaEDcvYiH-KGr_5gxAwIiPCNPDIvAJA5FAuIB9H1kYJuACjB6p8pUWZ9XDpi4o3QLEGM1dl9mAUi8xNWC9FtrC9Zcxq797IVG5fIPE_hq_W-a_KpHAC_rX4oWCQ9QnSe0QBGWuYDx101cxAJLFFYuQg\" target=\"_blank\">https://bit.ly/2PdaEF9</a><br />\r\n2. Lazada: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2NmhuEf%3Ffbclid%3DIwAR3_dCIgzy1UPmVhE0CugJ7lPQTqik7W9L3lSn4Voht6mkTec3xvvrnYIzI&amp;h=AT3MbkDYSZ86-V77zmvDOmLukFizbG9zXSOBO-FXxRslbmhScyT439bMf6RI5WKOAx-UZqk2QsD1-Eq04W-gODacgTeI6sIb5An_qGuFV4b37x3H_tT3aLpEeZ1pWFTHjxGoPYNlgIJTnI4xiJVDBpYQC7vQL9A8ei-4R8SvhO65zIttQI3uNSKXctP1pbf_qZL7on6qz9DCmTI53F0Eu-HZ0hExf5m5_vJAOKXjbUua8GXWViPFVFuceYjp7n_0uxGQ8Y-wFufELUwPkicgaCsEOWrq3rLz7YwW-abtPdfOVpUkHhfTlXKk8c-L7w_L70rc2e87LiNpbbeUp9low5orfvsVSHQc8NoppzuIM3LUlnwd_FeY_LEvhfOsvl6h9x0g21NQiS0ykkzCT-miQHWGai2BAbXAc0Ko4DU9n-5lxXIXQ9uxWz2J6cHMz_i1jujxKu-YSwo\" target=\"_blank\">https://bit.ly/2NmhuEf</a><br />\r\n3. Tiki: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2vuCEZf%3Ffbclid%3DIwAR2CYC01tnBfLt4xjGW0o6NaVVmdglwumfHwvw1CvtsvHnMzQf_91cFLDkU&amp;h=AT02oRTVFVZ4tZtnKC0TInuuWzKl63ujIw7fdYsMadi60jEJy6otRYz742YKKqyC9SUYShp4S2zeX8RebvY8DOO2UJ9vrcwgZ5e49HBnqH0Gc1YQk4Hp5m5jnLZWt3lnCI1bYmQky8Hl7zAKJsumWE50e3lToDmLTm0K7hOGqQhX01-L2qWp69AmnpraLCwmXRL405zJBYKnGPTjU9WZ6ny3EkRfQUCIGN0zsg6xR775VUwuP35wJORYAZcBVvTh9q0ErN6Anraz1XW73rIV_Stm3vX0x5-i7-Yr060TQLUjkGuZrmlcWT9Q2523yOoDg9jA5MT8ryrGo1HitXHasja-Bi5AJUJLpmnLOXlnmXwB5Pbs67y4KDVXkhg6QpMzmaPXkLfE3d7v4-Rvj1gziavj18-bsFiFJJhKtxeVcO3NxFRT7nIBkamCTzfLQk6xWG-WwlOak4s\" target=\"_blank\">https://bit.ly/2vuCEZf</a><br />\r\n4. Shop Vnexpress: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2AwA0aW%3Ffbclid%3DIwAR0lPjY7d95YB97gPaw0UqU7VSW28yVYZZdPDqAm-v1rzz8RYElTeFIiFTg&amp;h=AT1O7RyyITB97jerAJdtSEaDZ1jZ_SJEEm0CKxPfCl9hW3b1yFKe4__4M3hMsZOrcuPCNRiYF7wlcijsB_CP7sNrIv8awQNg3QvmHmFbZSwPoj9tQOwGqsZCRZgKniQgq2etregtDwQVWD9wK6TucWFr_wRTNThn6uWLOxYMWnqXvCz16y12JTUeT_o9vQi4qOfsa-HKsQ32TDdwc7oLDOu8anhISvK4WW9X4i7Mv-OTZKiPViFlpCkGJXOrZCgPwzjs4Mj2sdoXnBKCQAP-ibyJijfdJuFXyookLf8E3lqFLs7Lz19fe91tYxjV-aJU9hWB_33LaHkAnOiq-wcoPdmNN4qUEXDC0xfcL5TYYpVZ9CXKpCHhJ0Q-dUJjOytn8NsvSVzjr2JYGFDZwwGommtwlC6ia4Jg21fiz82RK9uIfuP-6llOG8fpvRZcPI6bflgFOUwiKls\" target=\"_blank\">https://bit.ly/2AwA0aW</a><br />\r\n5. AĐ&acirc;yRồi: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2q4sV9v%3Ffbclid%3DIwAR3_FzfJTVrnj44oDEZvQyjH--N97kiiqpTsiV9SLauQFD8-lF68UySndRI&amp;h=AT1IeXmWwnk6Z05F1v24NBgKw5O9N8vyvXU1UxiEJW8S5MYb1OXgOOEiMRq3X3iTDptfMW3pVwXuznsUlnSdMvA-WmfBXc_uv7BvopQaLKZ_Ugiv0F685pC2TLv7w3RWnIe0XTOPVl0aI_jr77F5mRk3DnMPEF636JO35HMDX0uloubISYRfBNoakmLOw0GSZH9mE-5ZdQXbb97BpjAeixLJt2lALz7UYl-UYSyg-RumetNXOYEECPL3fUE7DyiFK1ubRGxE69avQk7z1aZTSd3r-c1evQaPzzhm5l75ch2vjm85yOUwWR4WBiaZLxOZEdRvuAoJA4pRoFhvTTa1ccQDQ8BDa11PvBBG8oEr2nxEQOG1KJN2x3qF2ny36ggIXzSa2-B3CvlGKaS_IE0DK5yJb_ASVsp9LHYDc2cISjSHSRoZ_M6qhDzEBBx9mrWxTLRJjbvngMs\" target=\"_blank\">https://bit.ly/2q4sV9v</a></p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px\"><span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">🌎</span></span> Website: <a href=\"https://l.facebook.com/l.php?u=http%3A%2F%2Fvikensports.com.vn%2F%3Ffbclid%3DIwAR17s8KrFP_OyBuQNUqfF3faxGPpyUVi4TwNFgwbpZi6RP3ubUZb3hSsJIs&amp;h=AT3nW7j0C4ktXNPKbwMmEGncdUuoQRjFt-ovlZJxiajl0mwubBD-b-ISCnF5VK06-p3mtvriBOOOsHGT1vC5j3m3JM3zbeRbTx2CghI4hhxcFF73ABLuEbx8nkK2YfTkfRx3z1WZGpc6CiW_QkfxttfDOn90zNC8n1TkuJSDmGaEGlqpWewyDQpKRw9jMsFwhHzVHy7Z2bt6o19IgLc_zviDbAbo1Bk8wPYfLNHADfkpUfX6My0d0AUIl1uDQj-hMUHz3jLnsonxvWeSEcrPDQfymavuaG5seFVQ6oO-ThycUtlpuLVNfiIWaDpj7IfaQNAk0-zfGPcVKhqrriJMvMaAc34Zr3ZuulOb115h5nupekGm7E0wX0h8R3W0xEauwVmZwTibmr3eV-t6qbS4EIGO9DooaGm_PX8wIx_ynl4td9mU4BtmUuTnD7s-ZHhC0BIwbitaXMA\" target=\"_blank\">http://vikensports.com.vn</a><br />\r\n<span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">☎️</span></span> Hotline tư vấn v&agrave; hỗ trợ đặt h&agrave;ng: 028 7107 7868<br />\r\n<span style=\"font-family:helvetica,arial,sans-serif\"><span style=\"color:transparent; font-family:helvetica,arial,sans-serif; font-size:16px\">📩</span></span> Hotline g&oacute;p &yacute; sản phẩm: <a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fm.me%2FVikensportsvn%3Ffbclid%3DIwAR28SOhvVT8XrVQJgepVKyrlAcD_fNEVSlxnn28IgvfBW_dtetdCSo9Ss7Y&amp;h=AT0UXAIFGlDxVp6l_-QxZg5DbFlXyRVl8batTsKjxRXs3B2EE49qDOJRMagMJIUvglPq9vgSxXlMBiRKUG9SCIxO0wVGtlW0lvw39sQpW7UvAvp03ciGzlC6uHDrGxFn58O8ei_07PicVm5iqdIo8Uia2xj_5-3QTfPQtMetn_d-lQLFY5aJkqvZugNlPDn1Ckfcl5gLFLXUQrePUeDXFWJIK5wzeflbUk4tfxJhxirRhvZkecQgnytIpIml8HCCgFxEhF5L5-FuLQapf9WrXOXNq8Qcad8S9NLCrSV6CGEJR0aMp_mbM4ys8Y9BggRevk2e8ljfNIdejSu0TlLXHt4UcgkKlD15WdJJp7FvZtfC2odDKVDllkJoE9bOAWFtyCNtn-Lc2Li_9s1CZ3ESQoYAURB17RPVRtgR4xV3buOidIVGWdlLKtHGzgjh2Xep82_8HOSe0zo\" target=\"_blank\">m.me/Vikensportsvn</a></p>\r\n\r\n<p style=\"margin-left:0px; margin-right:0px\">&gt;&gt; GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG&lt;&lt;<img alt=\"\" src=\"/uploads/images/medias/%5BBannerStandee%5D_MEGA%20SALES%20ALL_FINAL_19-10-11.jpg\" style=\"height:1200px; width:1202px\" /></p>', 0, '/uploads/images/medias/%5BBannerStandee%5D_MEGA%20SALES%20ALL_FINAL_19-10-11.jpg', 'Khuyến mãi giày Viken', '2018-11-06 03:30:35', NULL, 'Khuyến mãi Viken', 'khuyến mãi Viken', 'Khuyến mãi cho tất cả các dòng sản phẩm Viken', '2019-11-27 01:53:11', '2018-11-06 03:30:35', '2019-11-27 01:53:11'),
-(17, 'KHUYẾN MÃI MEGA SALE ALL', 'khuyen-mai-mega-sale-all', NULL, 0, 10, 1, NULL, '<p><span style=\"font-size:22px\">GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG</span></p>\r\n\r\n<p><span style=\"font-size:20px\">❤️❤️❤️</span>&nbsp;Đ&aacute;p lại l&ograve;ng y&ecirc;u thương của Qu&yacute; kh&aacute;ch h&agrave;ng trong chương tr&igrave;nh Mega Sales All, Viken sẽ tiếp tục k&eacute;o d&agrave;i thời gian khuyến m&atilde;i đến 20/12/2018 d&agrave;nh cho những Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng chưa mua kịp trong th&aacute;ng 11 th&igrave; vẫn c&ograve;n thời gian để chọn cho m&igrave;nh đ&ocirc;i gi&agrave;y Viken y&ecirc;u th&iacute;ch.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"font-size:20px\">❤️❤️❤️&nbsp;</span>Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng c&oacute; thể đến c&aacute;c showroom để được tư vấn tốt nhất!!! Qu&yacute; Fan &amp; Qu&yacute; kh&aacute;ch h&agrave;ng vui l&ograve;ng tham khảo địa chỉ showroom tr&ecirc;n Fanpage của Viken.</p>\r\n\r\n<p><a href=\"https://www.facebook.com/hashtag/viken?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#Viken</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/vikenshoes?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#Vikenshoes</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/th%E1%BA%BFh%E1%BB%87vi%E1%BB%87tn%C4%83ng%C4%91%E1%BB%99ng?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=%2ANK-R\">#ThếHệViệtNăngĐộng</a><br />\r\n----------------------------------<br />\r\n📜Xem sản phẩm tại:</p>\r\n\r\n<p>1. Shopee:&nbsp;<a href=\"https://bit.ly/2PdaEF9?fbclid=IwAR2zzrzdZ67CmKK9QV4jPc5BOUkQgBkqvguulVJDVahMxiRct5OylynbeiU\" target=\"_blank\">https://bit.ly/2PdaEF9</a><br />\r\n2. Lazada:&nbsp;<a href=\"https://bit.ly/2NmhuEf?fbclid=IwAR3HDEyXS5zvq1HC6R1vVFqlJqTHnFoZ6j4pniHCfHocQ79va48OI7HgDm8\" target=\"_blank\">https://bit.ly/2NmhuEf</a><br />\r\n3. Tiki:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2vuCEZf%3Ffbclid%3DIwAR1iAk-RaSPWkeUFI3BdhMo2RRiwR144mMTgnyNK4TheeXUzWTvkhrn8N4M&amp;h=AT0WcVityLlakb5Y1SoWZGpo1BSWSaDcrHUPFaIts10yqA3S4h0lZvSi5l6geF1jlwO2JmL4NNsoJVIQyjsMo1u1dDXhV69iBi7TIzBjUYj80EW04x6uDwkCtQ-rA21TREgFzZjsFOyXBlp765NL8MSAPUqHby8j_I6kvfLFVwEEJZV70iVSbyh3yDQgtDQylPJaUkmOdIhHnd-3O4YsTe0Gu_rs9drhrq-jlZtozHUNRJVoZcHpS7hjCQg8UVTZOvjFc2mcVX0cyZhFhVha5Qgh5Actt3LPmrogsQeo8hNwHa0Ybupac6QUdY2dPfhFK-ox00V2QxLVtjrcaOa7CODYKLevZI1P2FYHOkH1PDIwOdTjlanKzPE2F1GkCwoBa8jta-HR57aBqwQ-2PldjoCjSV2km2wFMq4mzKy4CPkmvjWsN9rTPAteyIOjLzK3Y08Ws-USp9URRmZEZK28LDN6dUJVkScaTamdE82_t6TS5KBI2WBt3f4m7hKfq3v5eQP7VPE2xcowUVTW-npXflt9q5aF74EVtaLQEgBOkbJngy3S325Tvzqk-DzRHn5mMKF7TfulaU0WtVBMCC0jGC7u6zaQ1w8kiw8mXBnfJbuYyWsqm1aaJS-ejjmJYew\" target=\"_blank\">https://bit.ly/2vuCEZf</a><br />\r\n4. Shop Vnexpress:&nbsp;<a href=\"https://bit.ly/2AwA0aW?fbclid=IwAR0GlBoDgHhC07wByr0Fv9BtoEyuQMY4HEAVcuka4s4-ah4pCXYr7x1J3ro\" target=\"_blank\">https://bit.ly/2AwA0aW</a><br />\r\n5. AĐ&acirc;yRồi:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2q4sV9v%3Ffbclid%3DIwAR0txVPj0NiVYczObmAd6lM02h_Em26dqG2RmpjyEB9paQjbxRd-4kERas4&amp;h=AT3vamrRohtkbuPfjlbtYHVBBbCpLYmn-3kd-LJtQyRv6V3lilJinEG5DnlAj1O7QBkhmhjHNCX73CY6k7EdWYm1Z5Rgpyw3uVR3n5CbEasCQ0otLmOKphERRYJcXpP1KP_cKEEF-So9rGJzpicByNtAj02vL0VpDqeomnKkPoRkRSBXQZcDYR-7kwgqZzNTCrJMvyzmij7bgz452XIax6qxA_ThxteNz4aoQTgeSOD0yQLDEwE0l9Vr-uN8K_ny3Yf31LbnwMfCO8AIvA-zqNSD156bH5W99AymRFJq7eJ6wRnu08uB2FTT7pVtG0t8D3bAH6_LPXhOTVIRldu-U-rJPtxt5dIqj29PPVr3NOYqSBGzGQIRfbWGVrErFC6jIocaa2XQJdpInHiMIWiUJfRdUygti-MR_yjvqIwb94OP2iLCRx3Zq0OrBgZgJCAi9FPOlrxWcMS9TT-srjD0FNT1PSXzoVST5OlP1YD2DRvA-PLuwzfNCuQjMtBURj8TTcwMDWYjeKOKC37nbNkt2CNWovspTNjqnLLivBp_Grllgl8YNXmi6HscMaOzSALqC11Ihh2rNxrQ-J2KwJRmEtIZnKN-PA_2GypGdO_7Hyj5_AAlA2Xz0gu5UbSWEi8\" target=\"_blank\">https://bit.ly/2q4sV9v</a><br />\r\n6. Sendo:&nbsp;<a href=\"https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2zsWSVT%3Ffbclid%3DIwAR1k8evYAqi_cx08v7kFWJEX9nT71D48zeHET-OJHvRnCg6DnaxATxPk2rk&amp;h=AT2tonjX50BkandE2y8KalvcutesQmPd08aeBJBxOOIbw5T1c0_GXEIECudQatz0Kqrj4-UwHX9l0ve_WPvIh0ByvPujcMA8-rzBq6oafr57GxEaMaoEdGJSKuQStchH0HWIE-a91kfObFwWZN9k27xnlJmZJAdPOXfu02XkUmk8KB87bTJffsHvKXvjs0gMJCLZqGTZSeCU73zpe15qLAuiYfDNEQwqvocIgJZeijIv1_kxp_HOUQbOdfi981K90aCJ4RXqnxESBNMffPOfr4jO0_GOlkKd0DbGjpdRkAaTNNj5dTrYlsrAmS0mxlhwNnmLPGpqvi1pVFk0hFlT6VRYjjrQNYM07Z-Ej-0ChqX1vTOYh9bQP3jsuVIVEZuuryPAdbWik8OIWbgKSjX7CMu6SPh6V4tvr9mpC6myH2_jRFELH2JhidnlOflcsxwLDkRUAWt0RngizQdgoXBY5ORKaC0OFqygwYo6xEcgYpFbo8fpM6KiSWmcCRG2XGy9p1Wjo6WlEPt7KN_ioDD3ByzhzIcSFCpAIarhtCtKGoP1WPHJ6ZVcMaE5RrD0z3RDkmxVyXXjZer6DpxRGNc-IczvLM-aLBXT9AThuD1rH2bV-P0EG0jrDLMCa2qELVo\" target=\"_blank\">https://bit.ly/2zsWSVT</a></p>\r\n\r\n<p>Facebook :&nbsp;<a href=\"https://www.facebook.com/Vikensportsvn/\">https://www.facebook.com/Vikensportsvn/</a></p>\r\n\r\n<p>🌎&nbsp;Website:&nbsp;<a href=\"https://l.facebook.com/l.php?u=http%3A%2F%2Fvikensports.com.vn%2F%3Ffbclid%3DIwAR3soxGbkhDygkf-JpPpJuxNKi5rWyTg_R_ESfl0bgOjOAA67O-lpW5wPkk&amp;h=AT0Nt6w-J5Ew4MkXqC1WC9gBSJcOHtnp4as7IciOHGemu9QfOrlz3UGINSQHLnsCKjzYDZnWH6Ql2K7EE1OYPMfwYk8oqu6oNQ1ZErIIcV0N-ZumznKPvTdn0UZwLtHLt_AqZOueRpqyICt9B_8s_kHtSe5QWB2qZ1ymfYHMW1AejqPaRE_pE9LYBVwPn5YMvRBAnQAl0RatG-BYa0fbkoSerJmJwmsVcapAvSjDYA052WG__4PpxoT9BsVoHVOzppfsFFrey8bvqXsJXPFkV2yuKleTqiTFDZLuXB18J0ElrE7oNwkN2wZhZncjix1_aNjRxMwtYJ5pWkuv1hX00wsAc9H961jsG13gaBCMKLSSVpW9sc4kgPu5HwOBvudH8gx75zaPpWyvrjxnHOF5nAycD6F3edc5rgZaTMNNONXnchAfHAwvy00k3cvJFx-50QzrWchpV0uY1fgvpni-DtV0ahvxaMLw5LcdveN5zwKDs-WsfzKgw8HJGzZkxpi2HUFEbz92MsuG2qGpV6sFoptJSA7fmbyM62fpm2qVmEwz9JxJa9fEUygjreZzpDpwbtrl5P0qAz1vs13tRIj8Y-a02VzLPWobC1Hno_w_4VWgDUTpAH1y7y34zZjxvhs\" target=\"_blank\">http://vikensports.com.vn</a><br />\r\n☎️&nbsp;Hotline tư vấn v&agrave; hỗ trợ đặt h&agrave;ng: 028 7107 7868<br />\r\n📩&nbsp;Hotline g&oacute;p &yacute; sản phẩm:&nbsp;<a href=\"https://m.me/Vikensportsvn?fbclid=IwAR21pWnKrwGM6MBhSeeD3gpK5atQSzaY4qodTDZrxXOWJ3jpoUaw7QOOuTQ\" target=\"_blank\">m.me/Vikensportsvn</a></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&gt;&gt; GI&Agrave;Y THỂ THAO MỸ VIKEN - CHO MỘT THẾ HỆ VIỆT NĂNG ĐỘNG&lt;&lt;</p>\r\n\r\n<p><a href=\"https://www.facebook.com/Vikensportsvn/photos/a.193870551258333/281911422454245/?type=3&amp;eid=ARDQ9NqWOOLyLG9Bvi9ZPyH_TxahqMMyhyFoVfYD_ZSHehsEJYg6v6YyghRluEkFsPbDjcQxyFv1tpP3&amp;__xts__%5B0%5D=68.ARD5rfprAaOfsYnhCJtCJJM4b4uC25sClCu6BEju_BvJDfNxadumetH859A3yLRCjcJVt2KkVolVvPvuLmtwWq4HYLxMIqkr0-Oka4szaDgfFjuMaHm33iMQWPhTobdVOIF3o87wTJ_9SQoCi1RYfCO2AboSeVL7WoTlnLgkYbezw2Rf864Dx91ulIOOHR9iN_vXCfscVL0f4minJimW4PhZl7xSv21MK8E_Qz3awsKQq8gK3HOppJ6jSwTD9pMBI8fOsuwYjBfVh4pgQi1HKqyhVLvP49_cAq_YBNbTNN4J7bVg_yCBArSEMqqYOadlfG5POMwnnTIzHAFjn36UDJg&amp;__tn__=EHH-R\"><img alt=\"Trong hình ảnh có thể có: giày và văn bản\" src=\"https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-9/s720x720/46890440_281911425787578_5638639662705672192_o.jpg?_nc_cat=107&amp;_nc_ht=scontent.fsgn2-1.fna&amp;oh=5ecdd1e55dd7073655c9cb401cfc9c7b&amp;oe=5CA3F681\" style=\"height:473px; width:474px\" /></a></p>', 0, '/uploads/images/medias/46522569_281911429120911_26755271137165312_n.jpg', 'MEGA SALE ALL ,Khuyến mãi giày Viken', '2018-11-28 17:00:00', NULL, 'Khuyến mãi Viken', NULL, NULL, '2019-11-27 01:53:07', '2018-11-29 03:51:01', '2019-11-27 01:53:07'),
-(18, 'VIETNAM EXPO IN HOCHIMINH CITY 2018', 'vietnam-expo-in-hochiminh-city-2018', NULL, 0, 4, 1, NULL, '<p style=\"text-align: center;\"><span style=\"font-size:26px\">VIETNAM EXPO IN HOCHIMINH CITY 2018</span></p>\r\n\r\n<p style=\"text-align: center;\"><span style=\"font-size:20px\">🎁🎁🎁</span>&nbsp;Viken Sports th&acirc;n mời Q&uacute;i Fan &amp; Q&uacute;i kh&aacute;ch h&agrave;ng đến tham quan gian h&agrave;ng B116 khu A2 trưng b&agrave;y gi&agrave;y thể thao mỹ VIKEN SPORTS. Nhiều chương tr&igrave;nh khuyến m&atilde;i đặc biệt đang chờ Q&uacute;i Fan &amp; Q&uacute;i kh&aacute;ch h&agrave;ng chỉ c&oacute; tại đ&acirc;y trong &iacute;t ng&agrave;y triễn l&atilde;m diễn ra:</p>\r\n\r\n<p style=\"text-align: center;\"><span style=\"font-size:20px\">🏃&zwj;♀️🏃&zwj;♂️🏃&zwj;♀️VIETNAM EXPO IN HOCHIMINH CITY 2018🏃&zwj;♂️🏃&zwj;♀️🏃&zwj;♂️</span><br />\r\nThời gian: 5-8/12/2018.&nbsp;<br />\r\nTại trung t&acirc;m Triển l&atilde;m v&agrave; Hội nghị S&agrave;i G&ograve;n (SECC)<br />\r\n799 Nguyễn Văn Linh, Phường T&acirc;n Ph&uacute;, Q.7, TP. Hồ Ch&iacute; Minh.</p>\r\n\r\n<p style=\"text-align: center;\">Tr&acirc;n trọng k&iacute;nh mời.</p>\r\n\r\n<p style=\"text-align: center;\"><a href=\"https://www.facebook.com/hashtag/viken?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#Viken</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/vikenshoes?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#Vikenshoes</a>&nbsp;<a href=\"https://www.facebook.com/hashtag/th%E1%BA%BFh%E1%BB%87vi%E1%BB%87tn%C4%83ng%C4%91%E1%BB%99ng?source=feed_text&amp;epa=HASHTAG&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=%2ANK-R-R-R\">#ThếHệViệtNăngĐộng</a></p>\r\n\r\n<p style=\"text-align: center;\"><a href=\"https://www.facebook.com/Vikensportsvn/photos/a.193870551258333/284802375498483/?type=3&amp;eid=ARD1jHiZo-yOZQYChjNfZYHsJ5g0iurOkq0TfcPbv9FzGaJ4IWR1wXO2uKvyUwspLd0YQ9mPlR7gtLTY&amp;__xts__%5B0%5D=68.ARCXMOVH39pSA3MghjsjYp8V3MHNZG_3PdagQEbO-_SqBIGGpUWwDuUT6_4xoB4srBPtrITpgxokO-bxhMDPLsHO-qVBRrxq574yKsjRy3ni0RwgleEeX6SgY1e2-5rnUnHV7g9Rsx-GOboXG1IOhQckBt38svADqCuGvr2l381SxtYUH0ivSAt_m3PDFsvpNGsmASQp4qT8maUqt5GqKOCG-549jNWnMM-HJqibVvF64_AttjC86TSy5kHnC9TEztS-4NQZy82X3W3Haj_98utOn39Xi4jaHJgeB6F1SXJQdO_34OOO5pgHALgEf_dAxuo&amp;__tn__=EEHH-R-R-R\"><img alt=\"Trong hình ảnh có thể có: văn bản\" src=\"https://scontent.fsgn6-1.fna.fbcdn.net/v/t1.0-9/p843x403/47005831_284802382165149_6550904005004886016_o.jpg?_nc_cat=103&amp;_nc_oc=AWOmI4JTOTlD5Ocal4N61NPO_YgtsFFv1qrmI45aKDqfTDdxKZtj-3wC4Pn19A&amp;_nc_ht=scontent.fsgn6-1.fna&amp;oh=cc1971e819f7a5d9591ac68c8a660080&amp;oe=5C64D9C1\" style=\"height:500px; width:500px\" /></a></p>', 0, '/uploads/images/medias/%5BFB%5D_H%E1%BB%98I%20CH%E1%BB%A2%20H%C3%80%20N%E1%BB%98I-02.jpg', 'VIETNAM EXPO IN HOCHIMINH CITY 2018', '2018-12-03 17:00:00', NULL, NULL, NULL, NULL, '2019-11-27 01:53:03', '2018-12-04 16:29:20', '2019-11-27 01:53:03');
-
 -- --------------------------------------------------------
 
 --
@@ -1298,17 +933,6 @@ CREATE TABLE `post_categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `post_categories`
---
-
-INSERT INTO `post_categories` (`id`, `name`, `slug`, `parent_id`, `sort_order`, `author_id`, `image`, `status`, `meta_title`, `meta_keyworks`, `meta_description`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(9, 'Tin tuyển dụng', 'tin-tuyen-dung', 0, 0, 4, NULL, 1, 'Luyện thi chứng chỉ quốc tế IELTS, TOEFL iBT (từ 15 tuổi)', 'Luyện thi chứng chỉ quốc tế IELTS, TOEFL iBT (từ 15 tuổi)', 'Tin tuyển dụng', '2019-11-27 01:52:55', '2018-04-12 07:23:36', '2019-11-27 01:52:55'),
-(15, 'Tin tức', 'tin-tuc', 0, 0, NULL, NULL, 1, NULL, NULL, 'Tin tức', '2019-11-27 01:52:52', '2018-06-02 04:45:40', '2019-11-27 01:52:52'),
-(19, 'Tin nổi bật', 'tin-noi-bat', 0, 0, NULL, NULL, 1, NULL, NULL, NULL, '2019-11-27 01:52:49', '2018-06-26 03:50:06', '2019-11-27 01:52:49'),
-(20, 'SaleOff', 'khuyen-mai', 0, 0, NULL, NULL, 1, NULL, NULL, NULL, '2019-11-27 01:52:01', '2018-07-30 07:00:24', '2019-11-27 01:52:01'),
-(24, 'Sự kiện', 'su-kien', 0, 0, NULL, NULL, 1, NULL, NULL, NULL, '2019-11-27 01:51:56', '2018-08-22 01:04:46', '2019-11-27 01:51:56');
 
 -- --------------------------------------------------------
 
@@ -1345,7 +969,8 @@ INSERT INTO `post_tag` (`id`, `post_id`, `tag_id`, `created_at`, `updated_at`) V
 (94, 16, 27, NULL, NULL),
 (107, 17, 28, NULL, NULL),
 (108, 17, 27, NULL, NULL),
-(109, 18, 29, NULL, NULL);
+(109, 18, 29, NULL, NULL),
+(110, 19, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1659,9 +1284,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Super Admin', 'Admin', 'Quản lý toàn bộ CMS', '2018-06-19 10:04:57', '2018-06-19 10:04:57'),
-(2, 'Cộng tác viên đăng bài', 'Cộng tác viên đăng bài', 'Cộng tác viên đăng bài', '2018-06-20 03:26:09', '2018-06-20 03:26:09'),
-(3, 'cong tac vien 1', 'cong tac vien 1', 'cong tac vien 1', '2018-11-26 07:27:29', '2019-11-27 01:54:26');
+(1, 'Super Admin', 'Admin', 'Quản lý toàn bộ CMS', '2018-06-19 10:04:57', '2018-06-19 10:04:57');
 
 -- --------------------------------------------------------
 
@@ -1740,20 +1363,6 @@ INSERT INTO `settings` (`id`, `key`, `value`, `lang`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `shoppingcart`
---
-
-CREATE TABLE `shoppingcart` (
-  `identifier` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `instance` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `sliders`
 --
 
@@ -1765,58 +1374,6 @@ CREATE TABLE `sliders` (
   `category` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` text COLLATE utf8mb4_unicode_ci,
   `status` tinyint(4) NOT NULL DEFAULT '1',
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `staffs`
---
-
-CREATE TABLE `staffs` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `first_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `last_name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sex` int(11) NOT NULL,
-  `level` int(11) NOT NULL,
-  `education` int(11) DEFAULT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone_number` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `birth_date` date DEFAULT NULL,
-  `tax_code` int(11) NOT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci,
-  `avatar` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `staffs_in_out`
---
-
-CREATE TABLE `staffs_in_out` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `staffs_id` int(11) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `status`
---
-
-CREATE TABLE `status` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1838,20 +1395,12 @@ CREATE TABLE `tags` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
-
 --
--- Cấu trúc bảng cho bảng `tham_so_du_toan`
+-- Đang đổ dữ liệu cho bảng `tags`
 --
 
-CREATE TABLE `tham_so_du_toan` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `type` tinyint(4) NOT NULL COMMENT '1 TSC, 2 HSMN, 3 HSMTN, 4 HSGNMN, 5 HSMDHT',
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` double NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `tags` (`id`, `name`, `slug`, `status`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, '1', '1', 1, NULL, '2019-11-29 08:23:46', '2019-11-29 08:23:46');
 
 -- --------------------------------------------------------
 
@@ -1904,18 +1453,6 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `phon
 --
 
 --
--- Chỉ mục cho bảng `abouts`
---
-ALTER TABLE `abouts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `branch_hct`
---
-ALTER TABLE `branch_hct`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Chỉ mục cho bảng `categories`
 --
 ALTER TABLE `categories`
@@ -1949,65 +1486,12 @@ ALTER TABLE `customers`
   ADD UNIQUE KEY `admins_email_unique` (`email`);
 
 --
--- Chỉ mục cho bảng `customer_address`
---
-ALTER TABLE `customer_address`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `customer_address_customer_id_foreign` (`customer_id`);
-
---
 -- Chỉ mục cho bảng `discounts`
 --
 ALTER TABLE `discounts`
   ADD PRIMARY KEY (`id`),
   ADD KEY `discounts_course_id_foreign` (`course_id`),
   ADD KEY `discounts_course_class_id_foreign` (`course_class_id`);
-
---
--- Chỉ mục cho bảng `doc_details`
---
-ALTER TABLE `doc_details`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `doc_details_doc_headers_id_foreign` (`doc_headers_id`);
-
---
--- Chỉ mục cho bảng `doc_headers`
---
-ALTER TABLE `doc_headers`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `hoa_hong_san_pham`
---
-ALTER TABLE `hoa_hong_san_pham`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `homes`
---
-ALTER TABLE `homes`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `homes_slug_unique` (`slug`);
-
---
--- Chỉ mục cho bảng `jobs`
---
-ALTER TABLE `jobs`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `jobs_queue_index` (`queue`);
-
---
--- Chỉ mục cho bảng `locales`
---
-ALTER TABLE `locales`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `locales_code_unique` (`code`);
 
 --
 -- Chỉ mục cho bảng `log_activities`
@@ -2087,12 +1571,6 @@ ALTER TABLE `permission_group`
 ALTER TABLE `permission_role`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
   ADD KEY `permission_role_role_id_foreign` (`role_id`);
-
---
--- Chỉ mục cho bảng `phan_bo_doanh_so`
---
-ALTER TABLE `phan_bo_doanh_so`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `posts`
@@ -2222,45 +1700,15 @@ ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `shoppingcart`
---
-ALTER TABLE `shoppingcart`
-  ADD PRIMARY KEY (`identifier`,`instance`);
-
---
 -- Chỉ mục cho bảng `sliders`
 --
 ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `staffs`
---
-ALTER TABLE `staffs`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `staffs_in_out`
---
-ALTER TABLE `staffs_in_out`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `status`
---
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Chỉ mục cho bảng `tags`
 --
 ALTER TABLE `tags`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `tham_so_du_toan`
---
-ALTER TABLE `tham_so_du_toan`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2281,18 +1729,6 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
-
---
--- AUTO_INCREMENT cho bảng `abouts`
---
-ALTER TABLE `abouts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `branch_hct`
---
-ALTER TABLE `branch_hct`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
@@ -2316,7 +1752,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT cho bảng `content_lang_fields`
 --
 ALTER TABLE `content_lang_fields`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT cho bảng `customers`
@@ -2325,58 +1761,10 @@ ALTER TABLE `customers`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT cho bảng `customer_address`
---
-ALTER TABLE `customer_address`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT cho bảng `discounts`
 --
 ALTER TABLE `discounts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `doc_details`
---
-ALTER TABLE `doc_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `doc_headers`
---
-ALTER TABLE `doc_headers`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `failed_jobs`
---
-ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `hoa_hong_san_pham`
---
-ALTER TABLE `hoa_hong_san_pham`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `homes`
---
-ALTER TABLE `homes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT cho bảng `jobs`
---
-ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `locales`
---
-ALTER TABLE `locales`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `log_activities`
@@ -2412,7 +1800,7 @@ ALTER TABLE `menu_categories`
 -- AUTO_INCREMENT cho bảng `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `pages`
@@ -2445,28 +1833,22 @@ ALTER TABLE `permission_group`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
--- AUTO_INCREMENT cho bảng `phan_bo_doanh_so`
---
-ALTER TABLE `phan_bo_doanh_so`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT cho bảng `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `post_categories`
 --
 ALTER TABLE `post_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `post_tag`
 --
 ALTER TABLE `post_tag`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
@@ -2553,34 +1935,10 @@ ALTER TABLE `sliders`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `staffs`
---
-ALTER TABLE `staffs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `staffs_in_out`
---
-ALTER TABLE `staffs_in_out`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `status`
---
-ALTER TABLE `status`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT cho bảng `tags`
 --
 ALTER TABLE `tags`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `tham_so_du_toan`
---
-ALTER TABLE `tham_so_du_toan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `translations`
@@ -2593,16 +1951,6 @@ ALTER TABLE `translations`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Các ràng buộc cho các bảng đã đổ
---
-
---
--- Các ràng buộc cho bảng `customer_address`
---
-ALTER TABLE `customer_address`
-  ADD CONSTRAINT `customer_address_customer_id_foreign` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

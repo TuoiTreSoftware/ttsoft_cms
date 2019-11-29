@@ -16,22 +16,5 @@ return [
             'active'=> 'config',
             'middleware' => [],
         ],
-
-        //Khai báo lớp học theo chương trình đạo tạo, gồm các thông tin
-        'branch' => [
-            'name'  => trans('Chi nhánh'),
-            'icon'  => null,
-            'route' => route('admin.branch.get.list'),
-            'active'=> 'branch',
-            'middleware' => [],
-        ],
-
-        'user' => [
-            'name'  => trans('Người dùng'),
-            'icon'  => null,
-            'route' => "",
-            'active'=> 'user',
-            'middleware' => [],
-        ],
 	]
 ];

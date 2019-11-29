@@ -8,25 +8,11 @@ return [
 	'icon' => 'icon-screen-desktop',
 	'middleware' => [],
 	'group' => [
-		'trang_chu' => [
-			'name'  => trans('frontend::admin_trans.dashboard'),
-			'icon'  => null,
-			'route' => route('admin.home.get.index'),
-			'active'=> 'trang_chu',
-			'middleware' => [],
-		],
 		'menu' => [
 			'name'  => trans('menu::menu.module_name'),
 			'icon'  => null,
 			'route' => route('admin.menu.get.list'),
 			'active'=> 'menu',
-			'middleware' => [],
-		],
-		'gioi_thieu' => [
-			'name'  => trans('frontend::admin_trans.about_us'),
-			'icon'  => null,
-			'route' => route('admin.about.get.list'),
-			'active'=> 'gioi_thieu',
 			'middleware' => [],
 		],
 		'quan_ly_trang' => [

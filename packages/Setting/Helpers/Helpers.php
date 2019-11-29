@@ -12,16 +12,6 @@
 		}
 	}
 
-	if (!function_exists('get_branch_name')) {
-		function get_branch_name($key){
-			$data = \TTSoft\Setting\Entities\Branch::where('id',$key)->first();
-			if ($data) {
-				return $data->name;
-			}
-			return null;
-		}
-	}
-
 	if (!function_exists('get_province')) {
 		function get_province($key){
 			$data = DB::table('provinces')->where('id',$key)->first();

@@ -10,16 +10,11 @@ class Slider extends Model
     use SoftDeletes;
 
     CONST CATEGORY_HOME = 'home';
-    CONST CATEGORY_ABOUT = 'contact';
-    CONST CATEGORY_COURSES = 'courses';
-    CONST CATEGORY_KHONGGIAN = 'khonggian';
 
     CONST CATEGORY = [
         self::CATEGORY_HOME => 'Home Slider',
-        self::CATEGORY_ABOUT => 'Giới thiệu Slider',
-        self::CATEGORY_COURSES => 'Đào tạo Slider',
-        self::CATEGORY_KHONGGIAN => 'Không gian Slider',
     ];
+    
 	protected $table = 'sliders';
 
 	protected $primaryKey = 'id';
