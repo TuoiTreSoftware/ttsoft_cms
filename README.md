@@ -10,7 +10,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Step 1: Clone this source
+* Step 1: Clone this source in BRANCH v1.5.0
 * Step 2: Run "composer install"
 * Step 3: Create Database in your host(or localhost)
 * Step 4: Import tts_cms_db.sql file to your database in database folder
