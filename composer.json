@@ -1,0 +1,72 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "artesaos/seotools": "^0.12.1",
+        "barryvdh/laravel-translation-manager": "*",
+        "davejamesmiller/laravel-breadcrumbs": "4.x",
+        "doctrine/dbal": "~2.3",
+        "fideloper/proxy": "~3.3",
+        "gloudemans/shoppingcart": "^2.5",
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.2.0",
+        "laravolt/avatar": "^2.0",
+        "maatwebsite/excel": "~3.0",
+        "milon/barcode": "^5.3",
+        "proengsoft/laravel-jsvalidation": "^2.0",
+        "stevebauman/translation": "^1.4",
+        "szykra/laravel-flash-notifications": "~0.3",
+        "yajra/laravel-datatables-oracle": "~8.0",
+        "zizaco/entrust": "5.2.x-dev"
+    },
+    "require-dev": {
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "symfony/thanks": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "TTSoft\\": "packages/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "ttsoft/post",
+    "description": "English manager",
+    "type": "library",
+    "keywords": ["laravel", "base", "grid", "form"],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dat Nguyen",
+            "email": "nguyentandat43@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files" :[
+            "Helpers/Helpers.php"
+        ]
+    },
+}

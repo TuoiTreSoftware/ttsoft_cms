@@ -1,0 +1,86 @@
+.input-group .bootstrap-tagsinput{
+	border: 1px solid #e9ecef;
+    box-shadow: none;
+}
+.input-group .bootstrap-tagsinput input{
+	width: 505px;
+    padding: 4px;
+}
+
+.atributes .bootstrap-tagsinput {
+    width: 100%;
+}
+.atributes .bootstrap-tagsinput input {
+    padding: 4px;
+}
+
+.min-width td , .min-width td{
+	min-width: 200px;
+}
+
+.error-help-block{
+	color: #bc1010;
+}
+
+.m-r-20{
+	margin-bottom: 20px;
+}
+.left-blocks {
+    border: 1px solid #C5D0DC;
+}
+.accordion-style1.panel-group .panel-heading .accordion-toggle.accordion-toggle{
+    color: #478fca;
+    font-size: 14px;
+}
+.accordion-style1.panel-group .panel-heading .accordion-toggle.accordion-toggle:focus, .accordion-style1.panel-group .panel-heading .accordion-toggle.accordion-toggle:hover {
+    color: #478fca !important;
+    font-size: 14px !important;
+}
+.panel{
+	border: solid 1px #C5D0DC;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 5px;
+	margin-bottom: 3px;
+}
+.btn-mrt-5{
+	margin-bottom: 5px;
+}
+.list-check-menu{
+	padding: 0;
+}
+
+
+#result-search{
+	list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.list-check-menu li{
+	padding-left: 5px;
+}
+.list-check-menu span{
+	color: #000;
+}
+
+.note-editable p {
+	margin: inherit;
+}
+
+span.input-group-addon{
+	background: #2E8965;
+    border: 1px solid #2E8965;
+    color: #fff;
+    width: 39px;
+    padding: 8px;
+    padding-left: 11px;
+    cursor: pointer;
+}
+/*.edit-attribute .tag{
+	background: #763eaf;
+	padding : 5px;
+}*/
+
+.select2-container{
+	width: 100% !important;
+}
