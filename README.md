@@ -4,26 +4,17 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Laravel CMS
+* v1.5.0
+* [Link Github](https://github.com/TuoiTreSoftware/ttsoft_cms/tree/v1.5.0)
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Step 1: Clone this source
+Step 2: Run "composer install"
+Step 3: Create Database in your host(or localhost)
+Step 4: Import tts_cms_db.sql file to your database in database folder
+Step 5: Config your .env file to connect database
+Step 6: Go to home page: yourdomain/
+Step 7: Go to admin page: yourdomain/admin
+Let's experience it
