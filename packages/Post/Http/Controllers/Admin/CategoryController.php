@@ -29,7 +29,7 @@ class CategoryController extends Controller
         return view('post::categories.index',compact('categories','cateParents'));
     }
 
-    public function postCreate(){
+    public function postCreate(Request $request){
         $ref_lang = (request()->get('ref_lang')) ? request()->get('ref_lang') : config('app.locale');
     	$categories = request()->all();
     	$category = new Category;
