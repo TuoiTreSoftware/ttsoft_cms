@@ -5,7 +5,7 @@ namespace TTSoft\Documents\Console;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use TTSoft\Documents\Entities\Documents;
-class SetupPostCommand extends Command
+class SetupDocumentsCommand extends Command
 {
     /**
      * The name and signature of the console command.
