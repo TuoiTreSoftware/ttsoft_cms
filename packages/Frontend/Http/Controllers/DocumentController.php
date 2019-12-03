@@ -9,6 +9,10 @@ use TTSoft\Documents\Entities\Document;
 class DocumentController extends Controller
 {
 
+	public function getIndex(){
+        return view('frontend::documents.index');
+    }
+
     public function getDocument(Request $request){
     	$menus = DocumentMenu::get();
         return view('frontend::documents.documents',compact('menus'));

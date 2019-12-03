@@ -1,8 +1,8 @@
 <?php
 Route::middleware(['frontend_lang'])->group(function () {
 
-	Route::get('/','FrontendController@getHome')
-	->name('frontend.home.get');
+	Route::get('/','DocumentController@getIndex')
+	->name('get.index.document');
 
 	Route::prefix('documents')->group(function(){
 		Route::get('/','DocumentController@getDocument')
