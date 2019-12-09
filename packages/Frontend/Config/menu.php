@@ -22,19 +22,5 @@ return [
 			'active'=> 'quan_ly_trang',
 			'middleware' => [],
 		],
-		'quan_ly_bai_viet' => [
-			'name'  => trans('frontend::admin_trans.manage_post'),
-			'icon'  => null,
-			'route' => route('admin.post.get.list'),
-			'active'=> 'quan_ly_bai_viet',
-			'middleware' => [],
-		],
-		'danh_muc_bai_viet' => [
-			'name'  => trans('frontend::admin_trans.manage_cate'),
-			'icon'  => null,
-			'route' => route('admin.post-categories.get.list'),
-			'active'=> 'danh_muc_bai_viet',
-			'middleware' => [],
-		]
 	],
 ];

@@ -1,6 +1,7 @@
 <?php 
  
  return [
+ 	'module_name'	=> 'Sản phẩm',
  	'create_new_product_title' => "Thêm mới Vật Tư - Hàng Hóa",
  	'date_table' => 'Ngày tạo',
  	'title_table' => 'Tên sản phẩm',
@@ -8,6 +9,7 @@
  	'image_title' => 'Hình ảnh',
  	'price_table' => 'Giá',
  	'category_table' => 'Danh mục',
+ 	'attribute'	=>	'Thuộc tính',
  	'status_table' => 'Status',
  	'action_table' => '#',
  	'btn_create_product' => 'Thêm sản phẩm',

@@ -2,5 +2,6 @@
  
  return [
 
- 	'name' => "Hệ thống kết nối doanh nghiệp"
+ 	'name' => "Hệ thống kết nối doanh nghiệp",
+ 	'visit_website' => "Xem Website"
  ];

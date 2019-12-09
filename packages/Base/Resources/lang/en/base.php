@@ -2,5 +2,6 @@
  
  return [
 
- 	'name' => "The system manager connect business"
+ 	'name' => "The system manager connect business",
+ 	'visit_website' => "Visit Website"
  ];

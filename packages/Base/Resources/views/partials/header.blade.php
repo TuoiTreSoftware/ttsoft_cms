@@ -36,7 +36,7 @@
 
                 <li class="nav-item"> 
                     <a class="nav-link dropdown-toggle waves-effect waves-dark" href="{{ url('/') }}" target="_blank">
-                        <i class="ti-eye"></i> Xem Website
+                        <i class="ti-eye"></i> {{ trans('base::base.visit_website') }}
                     </a>
                 </li>
                 

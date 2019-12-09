@@ -54,6 +54,10 @@ th {
 	/*border-radius: unset!important;*/
 }
 
+.radio-online{
+	min-height: 24px;
+}
+
 /* Báo cáo table */
 
 .report table.fixed {

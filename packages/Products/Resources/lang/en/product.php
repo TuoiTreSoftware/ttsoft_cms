@@ -1,6 +1,7 @@
 <?php 
  
  return [
+ 	'module_name'	=> 'Product',
  	'create_new_product_title' => "Create New Product",
  	'date_table' => 'Created At',
  	'title_table' => 'Name',
@@ -8,6 +9,7 @@
  	'image_title' => 'Image',
  	'price_table' => 'Price',
  	'category_table' => 'Category',
+ 	'attribute'	=>	'Attribute',
  	'status_table' => 'Status',
  	'action_table' => 'Action',
  	'btn_create_product' => 'Create New Product',

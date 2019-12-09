@@ -35,6 +35,7 @@ class MenuController extends Controller
         $cate->status   = $request->status;
         $cate->lang     = $ref_lang;
         $cate->save();
+        
         flash_info(trans("Tạo menu thành công"));
         if (isset($request->save)) {
             return redirect()->route('admin.menu.get.list');
