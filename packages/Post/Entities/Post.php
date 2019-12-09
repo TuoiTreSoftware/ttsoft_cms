@@ -150,7 +150,7 @@ class Post extends Model
     }
 
     public function getRoute(){
-        return route('frontend.news.detail.get',[$this->slug , $this->id]);
+        return route('frontend.news.detail.get',[$this->slug]);
     }
     
     public function getStart_display(){
