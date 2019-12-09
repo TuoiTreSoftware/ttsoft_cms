@@ -15,9 +15,8 @@ class DocumentController extends Controller
         return view('frontend::documents.index');
     }
 
-    public function getDocument(Request $request, $id){
-    	$data = Post::get();
-        return view('frontend::documents.documents',compact('data'));
+    public function getDocument(){
+        return redirect('/documents/v1.5.0/docs-start-wellcome');
     }
 
 }

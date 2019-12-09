@@ -6,7 +6,7 @@ Route::middleware(['frontend_lang'])->group(function () {
 
 	Route::prefix('documents')->group(function(){
 		Route::prefix('/v1.5.0')->group(function(){
-			Route::get('/','FrontendController@getNewsDetail');
+			Route::get('/','DocumentController@getDocument');
 			Route::get('/{slug}','FrontendController@getNewsDetail')
 			->name('frontend.news.detail.get')
 			->where(['version' => '[a-zA-Z0-9-]+']);
