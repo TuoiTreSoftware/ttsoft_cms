@@ -35,6 +35,9 @@ class DatatablesPostController extends Controller
                 return $html;
             })
             ->addColumn('check', '<input type="checkbox" class="mycheckbox" id="check" value="{{ $id }}">')
+            ->editColumn('title', function($item){
+                return '<a href="'.$item->getRoute().'">'.$item->getTitle().'</a>';
+            })
             ->editColumn('image', function($item){
                 return '<img src="'.$item->getImage().'" width="50">';
             })
@@ -61,7 +64,7 @@ class DatatablesPostController extends Controller
             ->editColumn('created_at', function ($item) {
                 return $item->created_at ? with(new Carbon($item->created_at))->format('m/d/Y') : '';
             })
-            ->rawColumns(['check', 'action','languages','status','image','catogory_title'])
+            ->rawColumns(['check', 'title', 'action','languages','status','image','catogory_title'])
             ->make(true);
     }
 }

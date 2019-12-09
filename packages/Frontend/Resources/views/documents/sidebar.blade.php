@@ -1,18 +1,17 @@
 <div class="docs-navigation">
-	
 	<ul>
-		@foreach($menus as $key => $val)
-			@if($val->parent_id == 0)
-			<li><a href="#{{ $val->data_href }}">{{ $val->title }}</a>
-				@if(!empty($val->getChildMenu($val->id)))
-				@foreach($val->getChildMenu($val->id) as $val)
-				<ul class="one-page-menu" data-offset="110" data-easing="easeInOutExpo" data-speed="1250">
-					<li><a href="#" data-href="#{{$val->data_href}}">{{$val->title}}</a></li>
-				</ul>
+		@if(get_menu_nav('document_sidebar'))
+		@foreach(get_menu_nav('document_sidebar') as $val)
+		<li><a href="#">{{ $val->title }}</a>
+			<ul class="one-page-menu">
+				@if(get_menu_nav('document_sidebar', $val->id))
+				@foreach(get_menu_nav('document_sidebar', $val->id) as $child)
+				<li><a href="#">{{ $child->title }}</a></li>
 				@endforeach
 				@endif
-			</li>
-			@endif
+			</ul>
+		</li>
 		@endforeach
+		@endif
 	</ul>
 </div>

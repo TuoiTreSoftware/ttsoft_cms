@@ -62,7 +62,7 @@
 					</div>
 
 					<div class="center bottommargin">
-						<a href="#" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Start your FREE Trial</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Sign Up for a Subscription</a>
+						<a href="/documents/v1.5.0" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Version 1.5.0</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Version 2.6.0</a>
 
 						
 					</div>

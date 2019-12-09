@@ -46,7 +46,16 @@
 	<!-- Document Title
 	============================================= -->
 	<title>Documentation | Canvas</title>
+	<style type="text/css">
+		#header-wrap{
+			/*background-color: #333 !important;*/
+		}
 
+		/*
+		.docs-navigation ul li a, .docs-navigation ul li ul li a{
+			color: white;
+		} */
+	</style>
 </head>
 
 <body class="stretched">
@@ -70,12 +79,6 @@
 						<a href="https://tuoitresoft.com/" class="standard-logo" data-dark-logo="one-page/images/canvasone-dark.png"><img src="https://tuoitresoft.com/assets/images/logo.png" alt="Canvas Logo"></a>
 					</div><!-- #logo end -->
 
-					<!-- Primary Navigation
-					============================================= -->
-					<nav id="primary-menu">
-						<ul></ul>
-					</nav><!-- #primary-menu end -->
-
 				</div>
 
 			</div>
@@ -89,22 +92,7 @@
 			<div class="content-wrap nopadding">
 
 				@yield('content')
-
-				<script>
-					jQuery(document).ready( function($){
-
-						$( "#docs" ).tabs({
-							show: { effect: "fade", duration: 400 },
-							activate:function(event,ui){
-								$('html,body').stop(true).animate({
-									'scrollTop': $('.docs-content').offset().top - 40
-								}, 1250, 'easeInOutExpo');
-							}
-						});
-
-					});
-				</script>
-
+					
 			</div>
 
 		</section><!-- #content end -->

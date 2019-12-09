@@ -42,7 +42,7 @@
 .docs-navigation ul a {
 	display: block;
 	position: relative;
-	padding: 5px 60px;
+	padding: 5px 30px;
 	line-height: 24px;
 	font-weight: 500;
 	font-size: 13px;
@@ -59,8 +59,6 @@
 	top: -1px;
 	margin-left: 5px;
 }
-
-.docs-navigation ul ul { display: none; }
 
 .docs-navigation ul li.ui-tabs-active ul { display: block; }
 

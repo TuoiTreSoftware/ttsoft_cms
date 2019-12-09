@@ -102,7 +102,7 @@ if (!function_exists('get_menu_nav')) {
 		$lang = (session()->has('lang_locale_frontend')) ? session()->get('lang_locale_frontend') : config('app.locale');
 		$category = MenuCategory::where('identify',$identify)->first();
 		if (!$category) {
-			return false;
+			return [];
 		}
 		$data = \TTSoft\Menu\Entities\Menu::where(['parent_id' => $parent, 'category' => $category->id,'lang' => $lang])
 		->orderBy('position','ASC')
@@ -110,7 +110,7 @@ if (!function_exists('get_menu_nav')) {
 		if (count($data) > 0) {
 			return $data;
 		}
-		return false;
+		return [];
 	}
 }
 

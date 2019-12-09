@@ -82,11 +82,6 @@ class Post extends Model
         return $this->id;
     }
 
-    /* get Tit*/
-    public function getName(){
-        return $this->name;
-    }
-
     /* format date */
     public function getCreatedAt(){
         return $this->created_at->format("d/m/Y");
@@ -143,7 +138,7 @@ class Post extends Model
                 if ($key > 0) {
                     $prefix = ' - ';
                 }
-                $title.= '<a href="'.$value->getRoute().'"> '.$prefix.$value->getTitle().'</a> ';
+                $title.= $prefix.$value->getTitle();
             }
         }
         
