@@ -145,6 +145,7 @@
     <!-- Clock Plugin JavaScript -->
     <script src="/assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <!-- Color Picker Plugin JavaScript -->
+    <script src="{{ asset('frontend/js/functions.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/libs/jquery-asColor.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/libs/jquery-asGradient.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js') }}"></script>
@@ -198,6 +199,7 @@
             format : "dd-mm-yyyy"
         });
     </script>
+    <script type='text/javascript' src="/js/custom.js"></script>
     @stack('jQuery')
 </body>
 

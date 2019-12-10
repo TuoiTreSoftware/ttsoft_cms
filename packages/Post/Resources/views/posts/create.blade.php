@@ -202,6 +202,11 @@
     $(".show-meta-seo").click(function(){
         $(".meta-seo").toggle(200);
     });
-</script>
+    $(document).ready(function(){
+        $("#example-text-tt").keyup(function(){
+            slug = str_slug($(this).val());
+            $("#example-text-slug").val(slug);
+        });
+    });
 </script>
 @endpush

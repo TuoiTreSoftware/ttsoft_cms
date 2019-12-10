@@ -45,7 +45,27 @@
 	display: none;
 }
 
+.btn-version{
+	padding: 0px 50px;
+}
+
+label{
+	text-transform: capitalize;
+}
+
+.modal_download_template{
+	position: absolute;
+	z-index: 9999;
+	top:15%;
+	width: 41.5rem;
+	transform: translateX(110%);
+}
 @media screen and (max-width: 600px){
+	.modal_download_template{
+		transform: none;
+		width: auto;
+		left: 43px;
+	}
 	.btn-menu{
 		left: 19px;
 	}
@@ -61,5 +81,11 @@
 
 	.close-group, .btn-menu{
 		display: block;
+	}
+
+	#slider{
+		background: url('http://public.hp/uploads/images/hinhanh.png') center center no-repeat!important;
+		background-size: cover !important;
+		height: 900px !important;
 	}
 }

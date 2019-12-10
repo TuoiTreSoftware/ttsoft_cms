@@ -102,11 +102,9 @@
 		$(document).ready(function () {
 			$(".btn-menu").click(function(){
 				$(".sidebar-menu").show();
-				$(".docs-content").css("margin-left", "200px");
 			});
 			$(".close-menu").click(function(){
 				$(".sidebar-menu").hide();
-				$(".docs-content").css("margin-left", "0");
 			});
 		});
 	</script>

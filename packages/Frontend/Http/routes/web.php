@@ -11,6 +11,10 @@ Route::middleware(['frontend_lang'])->group(function () {
 			->name('frontend.news.detail.get')
 			->where(['version' => '[a-zA-Z0-9-]+']);
 		});
+		Route::prefix('/download')->group(function(){
+			Route::get('/template','DocumentController@getDownloadTemplate')->name('document.get.download_template');
+			Route::post('/template','DocumentController@postDownloadTemplate')->name('document.post.download_template');
+		});
 	});
 	
 	/* Set Language Frontend*/
