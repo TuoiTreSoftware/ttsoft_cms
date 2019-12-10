@@ -12,7 +12,7 @@ use TTSoft\Post\Entities\Category;
 use TTSoft\Post\Entities\Tag;
 use Illuminate\Support\Facades\DB;
 use TTSoft\Post\Http\Requests\Admin\Post\PostCreateRequest;
-use TTSoft\Post\Http\Requests\Admin\EditRequest;
+use TTSoft\Post\Http\Requests\Admin\Post\PostEditRequest;
 use Carbon\Carbon;
 use File;
 class PostController extends Controller
@@ -97,7 +97,7 @@ class PostController extends Controller
     }
 
 
-    public function postEdit($id, EditRequest $request){
+    public function postEdit($id, PostEditRequest $request){
     	$data = $request->all();
         DB::beginTransaction();
         if (isset($data['language'])) {
