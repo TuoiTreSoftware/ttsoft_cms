@@ -20,10 +20,21 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- Document Title
 	============================================= -->
-	<title>Landing Page - Style 2 | Canvas</title>
+	<title>Home CMS Document</title>
 	<style type="text/css">
 		body{
 			overflow: hidden;
+		}
+		.btn-version{
+			padding: 0px 50px;
+		}
+
+		@media screen and (max-width:600px){
+			#slider{
+				background: url('http://public.hp/uploads/images/hinhanh.png') center center no-repeat!important;
+				background-size: cover !important;
+				height: 900px !important;
+			}
 		}
 	</style>
 </head>
@@ -41,8 +52,7 @@
 			<div id="header-wrap">
 				<div class="d-flex justify-content-center clearfix">
 					<div id="logo">
-						<a href="https://tuoitresoft.com/" class="standard-logo" data-dark-logo="https://tuoitresoft.com/assets/images/logo.png"><img src="https://tuoitresoft.com/assets/images/logo.png" alt="TTS"></a>
-						<a href="https://tuoitresoft.com/" class="retina-logo" data-dark-logo="https://tuoitresoft.com/assets/images/logo.png"><img src="https://tuoitresoft.com/assets/images/logo.png" alt="TTS"></a>
+						<a href="/" data-dark-logo="{{ asset(web_config('logo')) }}"><img src="{{ asset(web_config('logo')) }}" alt="TTS"></a>
 					</div><!-- #logo end -->
 				</div>
 
@@ -62,9 +72,12 @@
 					</div>
 
 					<div class="center bottommargin">
-						<a href="/documents/v1.5.0" class="button button-3d button-teal button-xlarge nobottommargin"><i class="icon-star3"></i>Version 1.5.0</a> - OR - <a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge nobottommargin"><i class="icon-user2"></i>Version 2.6.0</a>
-
-						
+						<a href="/documents/v1.5.0" class="button button-3d button-teal button-xlarge nobottommargin btn-version"><i class="icon-star3"></i>Version 1.5.0</a>
+						<div class="full-width">
+							- OR -
+						</div>
+						<a href="#" data-scrollto="#section-pricing" class="button button-3d button-red button-xlarge btn-version
+						"><i class="icon-user2"></i>Version 2.6.0</a>
 					</div>
 
 				</div>

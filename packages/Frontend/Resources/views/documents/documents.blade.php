@@ -1,6 +1,6 @@
 @extends('frontend::documents.layouts.master')
 @section('content')
-<div id="docs" class="container-fullwidth clearfix">
+<div id="docs" class="container-fluid clearfix">
 
 	@include('frontend::documents.sidebar')
 	<div class="docs-content">

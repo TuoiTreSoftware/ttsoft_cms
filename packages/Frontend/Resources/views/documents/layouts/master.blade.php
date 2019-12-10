@@ -9,6 +9,8 @@
 	============================================= -->
 	<link href="http://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Roboto:300,400,500,700" rel="stylesheet" type="text/css" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
 	<link rel="stylesheet" href="/document/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="/document/style.css" type="text/css" />
 
@@ -18,6 +20,7 @@
 
 	<!-- Documentation Module Specific Stylesheet -->
 	<link rel="stylesheet" href="/document/docs.css" type="text/css" />
+	<link rel="stylesheet" href="/document/spacing.css" type="text/css" />
 	<!-- / -->
 
 	<link rel="stylesheet" href="/document/css/dark.css" type="text/css" />
@@ -31,8 +34,9 @@
 	<link rel="stylesheet" href="/document/one-page/css/fonts.css" type="text/css" />
 
 	<link rel="stylesheet" href="/document/css/responsive.css" type="text/css" />
+	<link rel="stylesheet" href="/document/custom.css" type="text/css" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--[if lt IE 9]>
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 	<![endif]-->
@@ -45,17 +49,8 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>Documentation | Canvas</title>
-	<style type="text/css">
-		#header-wrap{
-			/*background-color: #333 !important;*/
-		}
-
-		/*
-		.docs-navigation ul li a, .docs-navigation ul li ul li a{
-			color: white;
-		} */
-	</style>
+	<title>Documentation | TTS CMS</title>
+	
 </head>
 
 <body class="stretched">
@@ -70,13 +65,10 @@
 
 			<div id="header-wrap">
 
-				<div class="container-fullwidth clearfix">
+				<div class="container-fullwidth d-flex justify-content-center clearfix">
 
-					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-					<!-- Logo
-					============================================= -->
 					<div id="logo">
-						<a href="https://tuoitresoft.com/" class="standard-logo" data-dark-logo="one-page/images/canvasone-dark.png"><img src="https://tuoitresoft.com/assets/images/logo.png" alt="Canvas Logo"></a>
+						<a href="https://tuoitresoft.com/" data-dark-logo="{{ asset(web_config('logo')) }}"><img src="{{ asset(web_config('logo')) }}" alt="Canvas Logo"></a>
 					</div><!-- #logo end -->
 
 				</div>
@@ -106,6 +98,18 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="/document/js/functions.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".btn-menu").click(function(){
+				$(".sidebar-menu").show();
+				$(".docs-content").css("margin-left", "200px");
+			});
+			$(".close-menu").click(function(){
+				$(".sidebar-menu").hide();
+				$(".docs-content").css("margin-left", "0");
+			});
+		});
+	</script>
 
 </body>
 </html>

@@ -29,7 +29,7 @@
 	list-style: none;
 }
 
-.docs-navigation > ul { margin: 40px 0; }
+.docs-navigation > ul { margin: 20px 0; }
 
 .docs-navigation ul li { position: relative; }
 
@@ -88,8 +88,7 @@
 .docs-content {
 	position: relative;
 	overflow: hidden;
-	margin-left: 250px;
-	padding: 60px 0 60px 40px;
+	padding: 60px 0 60px 90px;
 	min-height: 1000px;
 }
 

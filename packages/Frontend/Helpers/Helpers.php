@@ -40,16 +40,6 @@ if (!function_exists('get_post_home')) {
 	}
 }
 
-if (!function_exists('get_post_khong_gian')) {
-	function get_post_khong_gian($limit = 4 , $category = \TTSoft\Post\Entities\Post::TIN_KHONG_GIAN){
-		$category = \TTSoft\Post\Entities\Category::find($category);
-		if (!$category) {
-			return false;
-		}
-		return $category->posts()->limit($limit)->get();
-	}
-}
-
 if (!function_exists('get_related_post')) {
 	function get_related_post($category, $id, $limit = 4){
 		$post = \TTSoft\Post\Entities\Post::where(['status' => 1,'category_id' => $category])
