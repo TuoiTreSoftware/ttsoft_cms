@@ -68,7 +68,7 @@
 				<div class="container-fullwidth d-flex justify-content-center clearfix">
 
 					<div id="logo">
-						<a href="https://tuoitresoft.com/" data-dark-logo="{{ asset(web_config('logo')) }}"><img src="{{ asset(web_config('logo')) }}" alt="Canvas Logo"></a>
+						<a href="/" data-dark-logo="{{ asset(web_config('logo')) }}"><img src="{{ asset(web_config('logo')) }}" alt="Canvas Logo"></a>
 					</div><!-- #logo end -->
 
 				</div>
