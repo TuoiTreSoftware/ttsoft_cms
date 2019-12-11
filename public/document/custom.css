@@ -84,7 +84,7 @@ label{
 	}
 
 	#slider{
-		background: url('http://public.hp/uploads/images/hinhanh.png') center center no-repeat!important;
+		background: url('/uploads/images/hinhanh.png') center center no-repeat!important;
 		background-size: cover !important;
 		height: 900px !important;
 	}
