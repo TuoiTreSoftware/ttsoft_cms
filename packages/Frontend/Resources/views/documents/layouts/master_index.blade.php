@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/document/css/responsive.css" type="text/css" />
 	<link rel="stylesheet" href="/document/custom.css" type="text/css" />
 	<link rel="stylesheet" href="/document/tagsinput/tagsinput.css" type="text/css" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="{{ asset(get_config('fav')) }}" type="image/x-icon"/>
 	<!-- Document Title
@@ -84,6 +85,7 @@
 	============================================= -->
 	<script src="/document/js/functions.js"></script>
 	<script src="/document/tagsinput/tagsinput.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 
 	@stack('js')
 </body>

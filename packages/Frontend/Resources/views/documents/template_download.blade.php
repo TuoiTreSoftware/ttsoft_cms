@@ -1,7 +1,6 @@
 @extends('frontend::documents.layouts.master_index')
 
 @push('css')
-<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
 <style type="text/css">
 	.form-submit{
 		margin-top: 30px;
@@ -77,7 +76,6 @@
 </section>
 @endsection
 @push('js')
-<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 <script>
 
 	$(document).ready(function(){
