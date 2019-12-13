@@ -6,30 +6,6 @@
 	.form-submit{
 		margin-top: 30px;
 	}
-	.select2-container--default .select2-selection--single {
-		background-color: rgba(0,0,0,0.2);
-    	border-color: rgba(0,0,0,0.25);
-	}
-	.select2-container--default .select2-selection--single .select2-selection__rendered {
-		color: #999;
-	}
-	.select2-selection--single {
-		height: 34px !important;
-	}
-
-	.select2-dropdown {
-		background-color: rgb(56, 56, 56);;
-    	border-color: rgba(0,0,0,0.25);	
-	}
-	.select2-container--default .select2-results__option{
-		color: #eaeaea;
-	}
-	.select2-container--default .select2-results__option--highlighted[aria-selected] {
-		color: #eaeaea;
-	}
-	.select2-container--default .select2-results__option[aria-selected=true] {
-	    background-color: #999;
-	}
 </style>
 @endpush
 <?php
