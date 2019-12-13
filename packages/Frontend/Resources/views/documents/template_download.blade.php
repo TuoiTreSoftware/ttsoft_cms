@@ -1,6 +1,37 @@
 @extends('frontend::documents.layouts.master_index')
 
+@push('css')
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+<style type="text/css">
+	.form-submit{
+		margin-top: 30px;
+	}
+	.select2-container--default .select2-selection--single {
+		background-color: rgba(0,0,0,0.2);
+    	border-color: rgba(0,0,0,0.25);
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		color: #999;
+	}
+	.select2-selection--single {
+		height: 34px !important;
+	}
 
+	.select2-dropdown {
+		background-color: rgb(56, 56, 56);;
+    	border-color: rgba(0,0,0,0.25);	
+	}
+	.select2-container--default .select2-results__option{
+		color: #eaeaea;
+	}
+	.select2-container--default .select2-results__option--highlighted[aria-selected] {
+		color: #eaeaea;
+	}
+	.select2-container--default .select2-results__option[aria-selected=true] {
+	    background-color: #999;
+	}
+</style>
+@endpush
 <?php
 	$template = Request::get('subject');
 ?>
@@ -23,25 +54,41 @@
 						</div>
 						<form method="post" action="">
 							{{ csrf_field() }}
-							<div class="form-group">
-								<label>Name</label>
-								<input type="text" name="name" required="" class="form-control">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Name</label>
+										<input type="text" name="name" required="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Phone Number</label>
+										<input type="phone" name="phone_number" required="" class="form-control">
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="email" required="" name="email" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Programing Language</label>
+										<input type="text" class="form-control" id="tagsinput" name="content[language]" data-role="tagsinput">
+									</div>
+									<div class="form-group">
+										<label>Start working</label>
+										<select class="form-control select2" name="content[start_working]">
+											<option value="">--Select--</option>
+											<?php $year = 2000; ?>
+											@for($i=$year; $i<=2019; $i++ )
+											<option value="{{ $i }}">{{ $i }}</option>
+											@endfor
+										</select>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<label>Phone Number</label>
-								<input type="phone" name="phone_number" required="" class="form-control">
-							</div>
-							<div class="form-group">
-								<label>Email</label>
-								<input type="email" required="" name="email" class="form-control">
-							</div>
-							<div class="form-group">
-								<label>Programing Language</label>
-								<input type="text" class="form-control" id="tagsinput" name="content[language]" data-role="tagsinput">
-							</div>
-							<div class="form-submit">
+							<div class="form-submit center">
 								<input type="hidden" required="" name="content[content]" value="Get {{ $template }} template" class="form-control">
-								<button class="btn btn-danger" style="width:100%">Register</button>
+								<button class="btn btn-danger" style="width:35%">Register</button>
 							</div>
 						</form>
 					</div>
@@ -54,8 +101,12 @@
 </section>
 @endsection
 @push('js')
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
 <script>
+
 	$(document).ready(function(){
+		$('.select2').select2();
+
 		var msg = '{{Session::get('message')}}';
 	    var exist = '{{Session::has('message')}}';
 	    $("#successmsg").hide();

@@ -43,6 +43,7 @@
 
 	<!-- External JavaScripts
 	============================================= -->
+	<link rel="icon" href="{{ asset(get_config('fav')) }}" type="image/x-icon"/>
 	
 	<script type="text/javascript" src="/document/js/jquery.js"></script>
 	<script type="text/javascript" src="/document/js/plugins.js"></script>

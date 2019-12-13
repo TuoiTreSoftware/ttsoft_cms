@@ -33,6 +33,8 @@
 
 	  gtag('config', 'UA-83199523-30');
 	</script>
+
+	@stack('css')
 	
 	<style type="text/css">
 		body{
@@ -41,6 +43,7 @@
 		
 
 	</style>
+
 </head>
 
 <body class="stretched">
