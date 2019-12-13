@@ -28,7 +28,8 @@ class OrderShipped extends Mailable
      */
     public function build()
     {
+        $title = json_decode($this->array['content']);
         return $this->view($this->array['view'],$this->array)
-                    ->subject($this->array['content']);;
+                    ->subject($title->content);;
     }
 }

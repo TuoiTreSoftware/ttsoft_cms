@@ -9,11 +9,10 @@ use App\Http\Controllers\Controller;
 use TTSoft\Menu\Entities\Menu;
 use TTSoft\Menu\Entities\MenuCategory;
 use Illuminate\Support\Facades\Session;
-use TTSoft\Page\Entities\Page;
-use TTSoft\Post\Entities\Post;
-use TTSoft\Post\Entities\Category;
+use TTSoft\Menu\Entities\Page;
+use TTSoft\Menu\Entities\Post;
+use TTSoft\Menu\Entities\Category;
 use Carbon\Carbon;
-use TTSoft\Courses\Entities\Courses;
 class MenuController extends Controller
 {
     public function getList(){

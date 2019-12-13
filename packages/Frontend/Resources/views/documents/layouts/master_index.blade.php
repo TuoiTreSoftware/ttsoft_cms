@@ -17,10 +17,23 @@
 
 	<link rel="stylesheet" href="/document/css/responsive.css" type="text/css" />
 	<link rel="stylesheet" href="/document/custom.css" type="text/css" />
+	<link rel="stylesheet" href="/document/tagsinput/tagsinput.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="{{ asset(get_config('fav')) }}" type="image/x-icon"/>
 	<!-- Document Title
 	============================================= -->
 	<title>Home CMS Document</title>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-83199523-30"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-83199523-30');
+	</script>
+	
 	<style type="text/css">
 		body{
 			overflow: hidden;
@@ -67,6 +80,8 @@
 	<!-- Footer Scripts
 	============================================= -->
 	<script src="/document/js/functions.js"></script>
+	<script src="/document/tagsinput/tagsinput.min.js"></script>
+
 	@stack('js')
 </body>
 </html>

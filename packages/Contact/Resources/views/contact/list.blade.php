@@ -41,7 +41,7 @@
 									</th>
 									<th>{{ trans('Name') }}</th>
 									<th>{{ trans('Email') }}</th>
-									<th>{{ trans('Content') }}</th>
+									<th>{{ trans('Subject') }}</th>
 									<th>{{ trans('Date') }}</th>
 									<th>{{ trans('Action') }}</th>
 								</tr>
@@ -65,7 +65,7 @@
 									            { data: 'check', name: 'check'},
 									            { data: 'name', name: 'name',searching : true},
 									            { data: 'email', name: 'email' },
-									            { data: 'content', name: 'content' },
+									            { data: 'subject', name: 'subject' },
 									            { data: 'created_at', name: 'created_at' },
 									            { data: 'action', name: 'action'}
 									        ]

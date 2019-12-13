@@ -69,23 +69,6 @@ Route::middleware(['admin','lang'])->prefix(config('ttsoft.cms_path'))->group(fu
 		});
 	});
 
-	/*QUẢN LÝ CÀI ĐẶT VÀ ĐƠN HÀNG DỰ TOÁN*/
-	Route::prefix('du-toan')->group(function () {
-		/*Danh sách đơn hàng dự toán*/
-		Route::prefix('list')->group(function () {
-			Route::get("/",'DuToanController@getList')
-				->name('sales.dutoan.get.list');
-		});
-
-		/*Tham số dự toán*/
-		Route::prefix('tham-so')->group(function () {
-			Route::get("/",'DuToanController@getThamSo')
-			->name('sales.dutoan.get.tham-so');
-
-			Route::post("/",'DuToanController@postThamSo')
-			->name('sales.dutoan.post.postThamSo');
-		});
-	});
 });
 
 

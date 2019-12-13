@@ -1,6 +1,8 @@
 <?php 
+use TTSoft\Customers\Entities\Customer;
+
 	function get_customer_name_by_id($id){
-        $data = \TTSoft\Customers\Entities\Customer::find($id);
+        $data = Customer::find($id);
         if (!$data) {
             abort(404);
         }
@@ -8,7 +10,7 @@
     }
 
     function get_customer_list(){
-        $data = \TTSoft\Customers\Entities\Customer::all();
+        $data = Customer::all();
         if (!$data) {
             abort(404);
         }

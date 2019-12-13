@@ -1,10 +1,10 @@
 <?php
 
 use TTSoft\Menu\Entities\Menu;
-use TTSoft\Post\Entities\Category;
-use TTSoft\Page\Entities\Page;
-use TTSoft\Post\Entities\Post;
-use TTSoft\Courses\Entities\Courses;
+use TTSoft\Menu\Entities\Category;
+use TTSoft\Menu\Entities\Page;
+use TTSoft\Menu\Entities\Post;
+
 function menu_list($lang , $category_id, $parent = 0){ ?>
     <?php $data = Menu::where(['parent_id' => $parent ,'category' => $category_id,'lang' => $lang])->orderBy('position','ASC')->get(); ?>
     <?php if(count($data) > 0): ?>
@@ -54,15 +54,6 @@ function menu_category($lang,$parent = 0,$text = ''){ ?>
     <?php endforeach; ?>
 <?php }
 
-function menu_courses(){ ?>
-    <?php $data = Courses::all(); ?>
-    <?php foreach($data as $category): ?>
-        <li>
-            <input type="checkbox" name="courses[]" class="check"  value="<?php echo $category->getId(); ?>">
-            <span><?php echo $category->getTitle(); ?></span>
-        </li>
-    <?php endforeach; ?>
-<?php }
 /* trang */
 function menu_page($lang){ ?>
     <?php $data = Page::getContentAll($lang)->get(); ?>

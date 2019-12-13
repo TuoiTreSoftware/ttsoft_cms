@@ -30,6 +30,7 @@ class DocumentController extends Controller
 
     public function postDownloadTemplate(Request $request){
     	$data = $request->all();
+        $data['content'] = json_encode($data['content']);
     	$info_regis = new Contact($data);
     	if($info_regis->save()){
             $data['view'] = 'frontend::documents.email';

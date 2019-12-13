@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use TTSoft\Media\Repositories\Eloquent\EloquentMediaRepository;
 use Illuminate\Support\Facades\Auth;
 use TTSoft\Media\Entities\Media;
-use TTSoft\Home\Entities\Home;
 use File;
 class GalleryController extends Controller
 {

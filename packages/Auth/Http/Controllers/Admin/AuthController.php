@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth as Authenticate;
 use TTSoft\Auth\Http\Requests\ForgotRequest;
 use TTSoft\Auth\Http\Requests\ResetRequest;
 use TTSoft\Auth\Http\Requests\LoginRequest;
-use TTSoft\User\Entities\User;
+use TTSoft\Auth\Entities\User;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 class AuthController extends Controller

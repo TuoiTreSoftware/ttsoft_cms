@@ -1,6 +1,7 @@
 <?php
 use TTSoft\Base\Entities\LangContent;
-
+use TTSoft\Categories\Entities\Category;
+use TTSoft\Categories\Entities\ProductCategory;
 
 if (!function_exists('get_language_product_category')) {
 	function get_language_product_category($lang , $post_id){
@@ -13,28 +14,8 @@ if (!function_exists('get_language_product_category')) {
 	}
 }
 
-/*function cate_parent($data,$parent = 0,$str = "",$select=0){
-	foreach($data as  $val)
-	{
-		$id = $val->id;
-		$name = $val->name;
-		if($val->parent_id == $parent)
-		{
-			if($select != 0 && $id == $select)
-			{
-				echo "<option value = '$id' selected = 'selected'>$str $name</option>";
-			}
-			else
-			{
-				echo "<option value = '$id'>$str $name</option>";
-			}
-			cate_parent($data,$id,$str."-",$select);
-		}
-	}
-}*/
-
 function get_category_by_prefix($prefix, $str, $id, $selected){
-	$data = \TTSoft\Categories\Entities\Category::where('prefix',$prefix)->where('parent_id',$id)->get();
+	$data = Category::where('prefix',$prefix)->where('parent_id',$id)->get();
 	foreach($data as  $val)
 	{
 		$id = $val->id;
@@ -48,7 +29,7 @@ function get_category_by_prefix($prefix, $str, $id, $selected){
 }
 
 function get_product_category($lang , $str='', $parent=0, $selected=''){
-	$data = \TTSoft\Categories\Entities\ProductCategory::getContentAll($lang)->where('parent_id',$parent)->get();
+	$data = ProductCategory::getContentAll($lang)->where('parent_id',$parent)->get();
 	foreach($data as  $val)
 	{
 		$id = $val->id;
@@ -63,7 +44,7 @@ function get_product_category($lang , $str='', $parent=0, $selected=''){
 }
 
 function get_list_category($prefix, $str, $id){
-	$data = \TTSoft\Categories\Entities\Category::where('prefix',$prefix)->where('parent_id',$id)->get();
+	$data = Category::where('prefix',$prefix)->where('parent_id',$id)->get();
 	foreach($data as  $val)
 	{
 		$id = $val->id;
@@ -80,15 +61,15 @@ function get_list_category($prefix, $str, $id){
 }
 //get tinh trang
 function get_category_name_by_id($id){
-	$data = \TTSoft\Categories\Entities\Category::find($id);
+	$data = Category::find($id);
 	if (!$data) {
 		echo '<span class="label label-danger font-weight-100">Chưa duyệt</span>';
 	}else{
-		$color = \TTSoft\Categories\Entities\Category::DOC_STATUS_CLASS_COLOR[$data->id];
+		$color = Category::DOC_STATUS_CLASS_COLOR[$data->id];
 		echo '<span class="label label-'.$color.' font-weight-100">'.$data->name.'</span>';
 	}
 }
-//get id_category_product
+
 
 
 

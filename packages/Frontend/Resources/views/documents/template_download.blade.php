@@ -35,8 +35,12 @@
 								<label>Email</label>
 								<input type="email" required="" name="email" class="form-control">
 							</div>
+							<div class="form-group">
+								<label>Programing Language</label>
+								<input type="text" class="form-control" id="tagsinput" name="content[language]" data-role="tagsinput">
+							</div>
 							<div class="form-submit">
-								<input type="hidden" required="" name="content" value="Get {{ $template }} template" class="form-control">
+								<input type="hidden" required="" name="content[content]" value="Get {{ $template }} template" class="form-control">
 								<button class="btn btn-danger" style="width:100%">Register</button>
 							</div>
 						</form>
@@ -61,6 +65,10 @@
 	    }if(exist && msg === 'error'){
 	      $("#errormsg").show();
 	    }
+
+	    $(function () {
+		    $('#tagsinput').tagsinput();
+		});
 	});
 </script>
 

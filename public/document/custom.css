@@ -58,13 +58,12 @@ label{
 	z-index: 9999;
 	top:15%;
 	width: 41.5rem;
-	transform: translateX(110%);
+	right: 0;
+	left: 0;
 }
 @media screen and (max-width: 600px){
 	.modal_download_template{
-		transform: none;
 		width: auto;
-		left: 43px;
 	}
 	.btn-menu{
 		left: 19px;

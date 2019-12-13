@@ -145,7 +145,6 @@
     <!-- Clock Plugin JavaScript -->
     <script src="/assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
     <!-- Color Picker Plugin JavaScript -->
-    <script src="{{ asset('frontend/js/functions.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/libs/jquery-asColor.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/libs/jquery-asGradient.js') }}"></script>
     <script src="{{ url('assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js') }}"></script>
@@ -162,7 +161,6 @@
     <script src="/assets/node_modules/summernote/dist/summernote.min.js"></script>
     <script type="text/javascript" src="/vendor/jsvalidation/js/jsvalidation.js"></script>
     <script src="/assets/node_modules/nestable/jquery.nestable.js"></script>
-    <script src="{{ url('frontend/js/plugins/jquery.owlcarousel.js') }}"></script>
     <script type='text/javascript' src='{{ asset('assets/admin/jquery.ajax.js') }}'></script>
     <script type="text/javascript" src="/assets/admin/jQuery.custom.js"></script>
     {{-- <script type="text/javascript">
@@ -173,25 +171,8 @@
     </script> --}}
     <script type="text/javascript">$('.select2').select2();</script>
 
-    <script src="{{ asset('frontend/js/plugins.js') }}"></script>
-    <script src="{{ asset('frontend/js/functions.js') }}"></script>
     <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 
-    <script>
-        // Owl Carousel Scripts
-        $('#oc-features').owlCarousel({
-            items: 1,
-            margin: 60,
-            nav: true,
-            navText: ['<i class="icon-line-arrow-left"></i>','<i class="icon-line-arrow-right"></i>'],
-            dots: false,
-            stagePadding: 30,
-            responsive:{
-                768: { items: 2 },
-                1200: { stagePadding: 200 }
-            },
-        });
-    </script>
     <script type="text/javascript">
         jQuery('.datepicker').datepicker({
             autoclose: true,
