@@ -1,6 +1,6 @@
 <?php
 
-namespace TTSoft\Page\Entities;
+namespace TTSoft\Menu\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

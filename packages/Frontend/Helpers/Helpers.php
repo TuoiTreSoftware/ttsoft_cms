@@ -1,6 +1,7 @@
 <?php 
 use  TTSoft\Products\Entities\Product;
 use  TTSoft\Post\Entities\Post;
+use  TTSoft\Menu\Entities\Menu;
 use  TTSoft\Menu\Entities\MenuCategory;
 use TTSoft\Categories\Entities\ProductCategory;
 if (!function_exists('get_slider')) {
@@ -86,7 +87,8 @@ if(!function_exists('get_featured_post')){
 		return $category->posts()->orderBy('id',$sort)->limit($limit)->get();
 	}
 }
-// get menu
+
+
 if (!function_exists('get_menu_nav')) {
 	function get_menu_nav($identify , $parent = 0){
 		$lang = (session()->has('lang_locale_frontend')) ? session()->get('lang_locale_frontend') : config('app.locale');
@@ -94,7 +96,7 @@ if (!function_exists('get_menu_nav')) {
 		if (!$category) {
 			return [];
 		}
-		$data = \TTSoft\Menu\Entities\Menu::where(['parent_id' => $parent, 'category' => $category->id,'lang' => $lang])
+		$data = Menu::where(['parent_id' => $parent, 'category' => $category->id,'lang' => $lang])
 		->orderBy('position','ASC')
 		->get();
 		if (count($data) > 0) {
@@ -103,6 +105,7 @@ if (!function_exists('get_menu_nav')) {
 		return [];
 	}
 }
+
 
 if (!function_exists('get_provinces')) {
 	function get_provinces(){
